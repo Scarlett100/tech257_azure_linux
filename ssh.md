@@ -1,7 +1,7 @@
 
 # ssh
 
-## 1 In your terminal, in the ssh folder, run this command
+## 1. In your terminal, in the ssh folder, run this command so we can generate a new key.
 ```
 ssh-keygen -t rsa -b 4096 -C "<enter email>
 ``` 
@@ -11,8 +11,8 @@ A secret key (like a master key) you keep only for emergencies.
 A public key (like a copy you can give to friends, that only they can use) that lets you connect securely.
 
 
-## 2
-This command, 
+## 2. Display the contents of file
+
 
 ``` 
 cat <keyname>, displays the contents of a file named <keyname> on your computer screen
@@ -40,7 +40,7 @@ ssh-add ~/.ssh/<key name>
  must run every time on a new terminal to register key!!! start with this, doesn’t matter where you are in file structure
  ``` 
 
-  ## 5
+  ## 5. Lets test our connection!
 
 ``` 
 ssh -T git@github.com 
