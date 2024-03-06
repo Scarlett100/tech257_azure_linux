@@ -77,7 +77,7 @@ Continuous Learning and Improvement
 ## Find up to 3 case studies showing how businesses have migrated to the cloud or used the cloud to improve in some way
 
 * [NASA Case Study – Amazon Web Services (AWS](aws.amazon.com/partners/success/nasa-image-library/)
-* [A project I personally worked on with Eon Energy](https://www.forbes.com/sites/patrickmoorhead/2022/10/24/eon-powers-to-a-successful-digital-transformation/)
+* [A project I personally worked on with Infosys for Eon Energy](https://www.forbes.com/sites/patrickmoorhead/2022/10/24/eon-powers-to-a-successful-digital-transformation/)
 * [Nike - Micro-service architecture](https://medium.com/nikeengineering/nikes-cloud-journey-at-aws-re-invent-aa2e6eaefa55)
 
 
