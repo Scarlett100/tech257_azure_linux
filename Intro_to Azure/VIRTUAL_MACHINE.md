@@ -16,13 +16,13 @@ cat test_again_key.pub
 ``` 
 **insert terminal pic***
 
-## Setup SSH key on Azure
+# <center> Setup SSH key on Azure <center>
 Next, I created a key on Azure: Below are the steps.
 
 ![Image Alt text](../images/Create_an_SSH_key.png)
 
 <br>
-As you can see below, I have opted to upload an existing key - the one we made earlier.
+As you can see below, I have opted to upload an existing key - the one we made earlier. It is important that we insert the correct RSA into the box, with no whitespace.
 <br>
 
 ![Image Alt text](../images/home_ssh.png)
@@ -32,6 +32,10 @@ As you can see below, I have opted to upload an existing key - the one we made e
 My key has been validated as can be seen in the picture below.
 
 ![Image Alt text](../images/validation_keys.png)
+
+Below we can see that my key has now been, titled morgan-az-key.
+![Image Alt text](../images/creation_keys.png)
+
 
 
 ## How to create a VM
