@@ -75,7 +75,6 @@ Streaming services:  From music and movies to video games, cloud computing power
 
 * Cost: may not actually be cheaper because you will have to train staff, pay for more services.
 
-
 * Security: may be open to more breaches.
 
 
@@ -96,7 +95,18 @@ OPEX  costs pertain to on premise datacentre costs. The customer does not worry 
 As shown below in the diagram you can see the market share has been with AWS, Microsoft and Google for a long time.
 ![Alt text](https://kinsta.com/wp-content/uploads/2019/10/cloud-market-growth-2019-1.png)
 
-With over 100 availability Availability Zones across 31 geographic regions, AWS currently takes up over 34% of the global cloud computing market share.
+### AWS
+*"With over 100 availability Availability Zones across 31 geographic regions, AWS currently takes up over 34% of the global cloud computing market share."*
+<br>
+
+### Microsoft Azure
+
+**"Since 2010 it has gained market share to 23% from AWS by appealing to enterprises, hybrid cloud embracers, and companies that mainly use Microsoft products, including Office 365."**
+<br>
+
+### Google Cloud Platform
+
+GCP has a **"niche for itself through innovations across Artificial Intelligence (AI), Machine Learning (ML), Data Analytics, and Kubernetes, the popular container management platform."**
 
 ## <center> The 3 largest Cloud providers known for (What makes them popular?) <center/>
 
@@ -111,10 +121,10 @@ With over 100 availability Availability Zones across 31 geographic regions, AWS 
 
 ## <center> 4 pillars of DevOps? How do they link into the Cloud? <center/>
 
-* Culture and Collaboration <br>
-* Measurement and metrics <br>
-* Automation and Tooling <br>
-* Continuous Learning and Improvement <br>
+* Culture and Collaboration: Global, bigger picture, unlimited scalability. <br>
+* Measurement and metrics: Billing and useage calculators <br>
+* Automation and Tooling: AWS Lambda is great example, a single trigger. <br>
+* Continuous Learning and Improvement: small incremental changes with big impacts. <br>
 <br>
 
 ## <center>Find up to 3 case studies showing how businesses have migrated to the cloud or used the cloud to improve in some way <center/>
@@ -131,6 +141,9 @@ With over 100 availability Availability Zones across 31 geographic regions, AWS 
 ## <center> How does Cloud Computing work as a business model? <center/>
 
 Mostly Pay as you go but paying u[front can give big discounts!
+
+* Scalability
+* elasticity
 
 ![alt](https://fayedigital.com/wp-content/uploads/2022/10/Cloud-Computing-Service-Models.jpg)
 
