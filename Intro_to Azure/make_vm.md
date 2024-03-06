@@ -44,7 +44,7 @@ My key has been validated as can be seen in the picture below.
 
 
 ``` 
-cat <keyname>, displays the contents of a file named <keyname> on your computer screen
+
 
 #stop vm when you no longer need
 ``` 
