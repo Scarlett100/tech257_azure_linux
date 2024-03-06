@@ -1,9 +1,17 @@
 
-The basics of Azure
+# <center>The basics of Azure<center/>
 
 Azure regions and availability zones: how they work and include up-to-date diagrams to help
 
 ## How is Azure structured/organised (resources you create on there)?
+
+##  <center> simple architecture <center/>
+
+![azure](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/enterprise-integration/_images/simple-enterprise-integration.png)
+
+##  <center> More complex architecture <center/>
+
+![azure](https://learn.microsoft.com/azure/architecture/browse/thumbs/aks-cicd-azure-pipelines-architecture.png)
 
 
 ### <center> 1. Cloud Computing Models: <center/>
@@ -16,6 +24,8 @@ Software as a Service (SaaS):  This category provides access to pre-built applic
 
 
 ### <center> 2. Core Services: <center/>
+
+![core services](https://k21academy.com/wp-content/uploads/2021/04/image.png)
 
 These services form the foundation for building and deploying cloud solutions on Azure. They include:
 
@@ -49,6 +59,10 @@ Development and Integration: Services to streamline development workflows and in
 ## What types/categories of services does Azure provide?
 
 # <center> The Azure Pricing Calculator? </center>
+
+********* what is it***********************
+
+![calc](https://static.packt-cdn.com/products/9781789614503/graphics/assets/db25ff5c-8bd2-4adb-8c45-edcd4e7598a0.png)
 
 <center>You should use the Azure Pricing Calculator for several reasons: <center/>
 
