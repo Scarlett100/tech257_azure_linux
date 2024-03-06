@@ -79,5 +79,7 @@ Development and Integration: Services to streamline development workflows and in
 
 <center> Azure Virtual Machines <center/>
 
-![Image Alt text](./images/v.%20your%20public%20address.png)
+
+
+1: Region
 
