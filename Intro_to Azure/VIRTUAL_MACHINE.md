@@ -49,7 +49,7 @@ Below we can see that my key has now been, titled morgan-az-key.
 
 
 
-#### How to create a VM
+### <center>How to create a VM <center/>
 
 On the homepage we can search for virtual machines's in the search bar. Once we are on this page we can choose our **Resource Group**, **Virtual Machine Name**, **Region**, **Security** and more. It is high;y importamt that we chose the region of **UK South** and the **Image** of **Ubuntu Pro 18.04 LTS x64 Gen2**. For our authentication - not shown in this picture - it is important we chose **SSH Public Key**.
 ![Image Alt text](../images/beginning.png)
@@ -58,7 +58,7 @@ Next, it is ideal that we change our SSH Public Key Source to **"Use existing ke
 
 ![Image Alt text](../images/Azure%20now%20automatically%20generates%20an%20SSH%20key%20pair%20for%20you%20and%20allows%20you%20to.png)
 
-#### <center> Disks <center/>
+### <center> Disks <center/>
 
 Virtual machine son Azure have a temporary short term storage disk and one operating disk. You can however, add on storage later.
 
@@ -66,19 +66,19 @@ It is integral that Standard SSD is chosen as opposed to the default Premium, in
 
 ![image alt text](../images/disks.png)
 
-#### <center> Networking <center/>
+### <center> Networking <center/>
 
 Here we can see the networking choices.
 ![image](../images/%20_Virtual_machines.png)
 
 
-#### <center> Tags <center/>
+### <center> Tags <center/>
 
 Tags can be seen as Key Value pairs that are applied to multiple resources whilst keeping the same tags. It can be helpful with consolidated billing.
 
 ![image](../images/Home_Virtual_machines.png)
 
-#### <center> Creation! <center/>
+### <center> Creation! <center/>
 
 Next we can see our VM has passed validation and it shows all the resources tags have been assigned too.
 
