@@ -56,39 +56,60 @@ Streaming services:  From music and movies to video games, cloud computing power
 * platform as a service 
 * Software as a service
 
-## Advantages/Disadvantages of the Cloud? Specifically for a business.
+# Advantages/Disadvantages of the Cloud? Specifically for a business.
 
-* Cost savings: You only pay for the resources you use, no more purchasing expensive computing hardware, now you can pay as you go.
+## <center> Advantages <center/>
 
-* Environmentally friendly: Less hardware means less useage of materials and a greater reduction in your environmental impact.
+* Cost savings: You only pay for the resources you use, no more purchasing expensive computing hardware, now you can pay as you go.<br>
 
-* Security: Cloud services have security experts and can achieve high levels of security even for small companies through the touch of a button.
+* Environmentally friendly: Less hardware means less useage of materials and a greater reduction in your environmental impact. <br>
+
+* Security: Cloud services have security experts and can achieve high levels of security even for small companies through the touch of a button. <br>
+
+* Access: A smaller org may not have options to have so many resources/services available to them at the beginning, with cloud, they have that from the beginning.
+<br>
+* SLA: an agreement of guaranteed uptime , to achieve a particular level of availabilty. It means you don't have the responsibilty to take care of this. <br>
+
+## <center> Disadvantages <center/>
 
 
+* Cost: may not actually be cheaper because you will have to train staff, pay for more services.
 
 
-##  What is OpEx vs CapEx?
+* Security: may be open to more breaches.
+
+
+# <center> What is OpEx vs CapEx? <center/>
+
+## <center> CapEx <center/>
 
 CAPEX pertains to spending money upfront on physical hardware. CAPEX can include but not exclusive too server costs, storage costs, disaster recovery, technical personal, backup and archive costs, network costs etc.The downside of this is that you are almost guessing what you will spend.
+## <center> OpEx <center/>
 
 OPEX  costs pertain to on premise datacentre costs. The customer does not worry about any physical costs, this now lies with the service provider. can focus on training staff on cloud, customising and improving product. With OPEX billing is based on Compute and Storage usage metrics.
 
 
 ![alt text](https://lh4.googleusercontent.com/7lrjv67tlme7Kt4QNKjqfmQEqgyLYULvHKTHM3OZUMT-B-V_CginoDfidknNxEt20tA1tpTpvw9cq1BkWuAAdKuzx_bkdcLJPGvfwzT1olRJcBeQ4gsmgnLU5YlJZafx0QY43hXxm3yIQj8-u-mr0GA)
 
-## Marketshare 
+## <center> Marketshare <center/>
 
 As shown below in the diagram you can see the market share has been with AWS, Microsoft and Google for a long time.
 ![Alt text](https://kinsta.com/wp-content/uploads/2019/10/cloud-market-growth-2019-1.png)
 
+With over 100 availability Availability Zones across 31 geographic regions, AWS currently takes up over 34% of the global cloud computing market share.
 
-## What are the 3 largest Cloud providers known for (What makes them popular?)
+## <center> The 3 largest Cloud providers known for (What makes them popular?) <center/>
 
-Microsoft Azure <br>
-Google Cloud Platform <br>
-Amazon Web Services <br>
+![alt](https://www.cloudzero.com/wp-content/uploads/2023/10/cloud-service-providers-market-share.webp)
 
-##  4 pillars of DevOps? How do they link into the Cloud?
+<center> Microsoft Azure:  <center/><br>
+<center>Google Cloud Platform: GCP has expertise in Data and Analytics.  
+<center/> <br>
+<center>Amazon Web Services: AWS provides more services <center/><br>
+
+
+
+## <center> 4 pillars of DevOps? How do they link into the Cloud? <center/>
 
 * Culture and Collaboration <br>
 * Measurement and metrics <br>
@@ -96,7 +117,9 @@ Amazon Web Services <br>
 * Continuous Learning and Improvement <br>
 <br>
 
-## Find up to 3 case studies showing how businesses have migrated to the cloud or used the cloud to improve in some way
+## <center>Find up to 3 case studies showing how businesses have migrated to the cloud or used the cloud to improve in some way <center/>
+
+* Click below to find out more.
 
 * [NASA Case Study – Amazon Web Services (AWS](aws.amazon.com/partners/success/nasa-image-library/)
 * [A project I personally worked on with Infosys for Eon Energy](https://www.forbes.com/sites/patrickmoorhead/2022/10/24/eon-powers-to-a-successful-digital-transformation/)
@@ -105,7 +128,7 @@ Amazon Web Services <br>
 
 
 
-## How does Cloud Computing work as a business model?
+## <center> How does Cloud Computing work as a business model? <center/>
 
 Mostly Pay as you go but paying u[front can give big discounts!
 
@@ -115,6 +138,11 @@ Mostly Pay as you go but paying u[front can give big discounts!
 ## What sorts of things do you usually need to pay for when using the cloud?
 
 Within the cloud you may need to pay for database useage, bucket useage, virtual machine useage, VPC, VPN useage. Another useage.
+
+## References
+``` 
+https://www.cloudzero.com/blog/cloud-service-providers/#:~:text=Amazon%20Web%20Services%20(AWS)%2C,according%20to%20Synergy%20Research%20Group.
+``` 
 
 
 GNU GENERAL PUBLIC LICENSE
