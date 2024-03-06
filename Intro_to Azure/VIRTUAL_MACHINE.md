@@ -38,10 +38,12 @@ As you can see below, I have opted to upload an existing key - the one we made e
 <br>
 
 My key has been validated as can be seen in the picture below.
+<br>
 
 ![Image Alt text](../images/validation_keys.png)
 
 Below we can see that my key has now been, titled morgan-az-key.
+<br>
 ![Image Alt text](../images/creation_keys.png)
 
 
@@ -60,7 +62,7 @@ Next, it is ideal that we change our SSH Public Key Source to **"Use existing ke
 
 ## <center> Disks <center/>
 
-Virtual machine son Azure have a temporary short term storage disk and one operating disk. You can however, add on storage later.
+Virtual machines on Azure have a temporary short term storage disk and one operating disk. You can however, add on storage later.
 
 It is integral that Standard SSD is chosen as opposed to the default Premium, in order to reduce costs.
 
