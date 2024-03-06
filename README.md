@@ -3,6 +3,9 @@
 #  What is cloud computing?
 
 Instead of using a personal computer or server, cloud computing describes a network of remote servers hosted on the internet to store, manage and process data.
+<br>
+
+![alt text](https://i0.wp.com/blog.knoldus.com/wp-content/uploads/2021/07/1_ngkHgQq7ij1NBNr62er3zA.png?fit=640%2C469&ssl=1)
 
 #  History of Cloud Computing
 
