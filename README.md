@@ -1,4 +1,4 @@
-# tech257_azure_linux
+ # tech257_azure_linux
 
 #  What is cloud computing?
 
@@ -20,14 +20,20 @@ This physical machine can run multiple web-apps/sites because it has virtual sub
 
 ## What can you do with Cloud Computing?
 
+Big data analytics: capacity to analyse expansive datasets. This can be used for tasks like business intelligence, marketing analytics and scientific research.
 
+Artificial intelligence (AI) and machine learning (ML): Cloud platforms offer access to powerful AI and ML tools and services. This allows businesses to leverage these technologies without having to invest in expensive hardware and expertise.
+
+Collaboration: Cloud-based tools can facilitate communication and collaboration between teams and individuals, even if they are located in different places. This can be essential for businesses with remote workers or geographically dispersed teams.
+
+Streaming services:  From music and movies to video games, cloud computing powers many of the streaming services we use today.  These services allow you to access content on-demand from any device with an internet connection.
 
 ## What are the 4 TYPES/MODELS of Cloud?
 
-*private
-*public
-*hybrid
-*community cloud
+* private <br>
+* public <br>
+* hybrid <br>
+* community cloud
 
 ## What are the different types of cloud service?
 
@@ -70,9 +76,9 @@ Continuous Learning and Improvement
 
 ## Find up to 3 case studies showing how businesses have migrated to the cloud or used the cloud to improve in some way
 
-* NASA
-* Eon Energy
-* Nike
+* [NASA Case Study – Amazon Web Services (AWS](aws.amazon.com/partners/success/nasa-image-library/)
+* [A project I personally worked on with Eon Energy](https://www.forbes.com/sites/patrickmoorhead/2022/10/24/eon-powers-to-a-successful-digital-transformation/)
+* [Nike - Micro-service architecture](https://medium.com/nikeengineering/nikes-cloud-journey-at-aws-re-invent-aa2e6eaefa55)
 
 
 
