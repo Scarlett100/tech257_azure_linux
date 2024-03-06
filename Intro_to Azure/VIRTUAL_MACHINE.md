@@ -4,9 +4,11 @@
 
 ![virtual machine](https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/what-is-a-virtual-machine_overview-img?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1280&hei=431&qlt=95)
 
-A virtual machine can be thought of as a *"virtual computer within a computer"* according to Microsoft. Virtual machines require no physical hardware from the customer, other than a personal device, the portability of Virtual machines leads to many benefits including **cost reductions**, by only paying what you use, therefore introducing **scalability**. The ability to scale down if your workload requires a smaller instance and the ability to scale up if you require a larger instance at remarkable **speed** make virtual machines very attractive. The speed means that you can mov from one hypervisor to another on a different machine. This portability opens up global options and **lowered downtimes** Lastly, security in VM's are very high, you can set controls, and microsoft has its own settings built in. Virtual machines can be used for accessing virus infected data,backing up your OS, testing, deploying and apps to the cloud.
+A virtual machine can be thought of as a *"virtual computer within a computer"* according to Microsoft. Virtual machines require no physical hardware from the customer, other than a personal device, the portability of Virtual machines leads to many benefits including **cost reductions**, by only paying what you use, therefore introducing **scalability**. The ability to scale down if your workload requires a smaller instance and the ability to scale up if you require a larger instance at remarkable **speed** make virtual machines very attractive. The speed means that you can mov from one hypervisor to another on a different machine. This portability opens up global options and **lowered downtimes** Lastly, security in VM's are very high, you can set controls, and microsoft has its own settings built in. Virtual machines can be used for accessing virus infected data,backing up your OS, testing, deploying and apps to the cloud. Below we can see the architecture of a VM.
 
-![image Alt text](../images/vm_npng.png)
+#### <center>  Azure VM Architecture <center/>
+
+![image Alt text](../images/vm_complete.png)
 
 ## How to login to Azure
 The portal can be accessed below
