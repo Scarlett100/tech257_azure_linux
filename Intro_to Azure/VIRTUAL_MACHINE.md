@@ -1,6 +1,6 @@
 
 
-# <center>  Virtual machines <center/>
+# <center>  Virtual machines <center>
 
 ![virtual machine](https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/what-is-a-virtual-machine_overview-img?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1280&hei=431&qlt=95)
 
