@@ -65,14 +65,15 @@ As shown below in the diagram you can see the market share has been with AWS, Mi
 
 Microsoft Azure <br>
 Google Cloud Platform <br>
-Amazon Web Services
+Amazon Web Services <br>
 
 ##  4 pillars of DevOps? How do they link into the Cloud?
 
-Culture and Collaboration
-Measurement and metrics
-Automation and Tooling
-Continuous Learning and Improvement
+* Culture and Collaboration <br>
+* Measurement and metrics <br>
+* Automation and Tooling <br>
+* Continuous Learning and Improvement <br>
+<br>
 
 ## Find up to 3 case studies showing how businesses have migrated to the cloud or used the cloud to improve in some way
 
