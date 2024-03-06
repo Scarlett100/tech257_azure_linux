@@ -5,6 +5,10 @@
 Instead of using a personal computer or server, cloud computing describes a network of remote servers hosted on the internet to store, manage and process data.
 <br>
 
+somewhere else
+on demand 
+on the internet
+centrally managed
 ![alt text](https://i0.wp.com/blog.knoldus.com/wp-content/uploads/2021/07/1_ngkHgQq7ij1NBNr62er3zA.png?fit=640%2C469&ssl=1)
 
 #  History of Cloud Computing
@@ -21,6 +25,7 @@ One physical machine dedicated to a single business.
 This physical machine can run multiple web-apps/sites because it has virtual sub machines.
 
 
+
 ## What can you do with Cloud Computing?
 
 Big data analytics: capacity to analyse expansive datasets. This can be used for tasks like business intelligence, marketing analytics and scientific research.
@@ -31,12 +36,16 @@ Collaboration: Cloud-based tools can facilitate communication and collaboration 
 
 Streaming services:  From music and movies to video games, cloud computing powers many of the streaming services we use today.  These services allow you to access content on-demand from any device with an internet connection.
 
+
 ## What are the 4 TYPES/MODELS of Cloud?
 
-* private <br>
-* public <br>
-* hybrid <br>
-* community cloud
+* private: eg. Hospitals, Government <br>
+* public: businesses <br>
+* hybrid:  companies not fully needing or wanting to jump to cloud or need to migrate slowly <br>
+* community cloud:
+<br>
+
+![alt text](https://www.researchhq.net/wp-content/uploads/2021/03/The-Different-Types-of-Cloud-Computing-and-How-They-Differ-copy.jpg)
 
 ## What are the different types of cloud service?
 
@@ -55,11 +64,17 @@ Streaming services:  From music and movies to video games, cloud computing power
 
 * Security: Cloud services have security experts and can achieve high levels of security even for small companies through the touch of a button.
 
+
+
+
 ##  What is OpEx vs CapEx?
 
 CAPEX pertains to spending money upfront on physical hardware. CAPEX can include but not exclusive too server costs, storage costs, disaster recovery, technical personal, backup and archive costs, network costs etc.The downside of this is that you are almost guessing what you will spend.
 
 OPEX  costs pertain to on premise datacentre costs. The customer does not worry about any physical costs, this now lies with the service provider. can focus on training staff on cloud, customising and improving product. With OPEX billing is based on Compute and Storage usage metrics.
+
+
+![alt text](https://lh4.googleusercontent.com/7lrjv67tlme7Kt4QNKjqfmQEqgyLYULvHKTHM3OZUMT-B-V_CginoDfidknNxEt20tA1tpTpvw9cq1BkWuAAdKuzx_bkdcLJPGvfwzT1olRJcBeQ4gsmgnLU5YlJZafx0QY43hXxm3yIQj8-u-mr0GA)
 
 ## Marketshare 
 
@@ -92,7 +107,10 @@ Amazon Web Services <br>
 
 ## How does Cloud Computing work as a business model?
 
-Pay as you go: You pay for what you use, no upfront costs.
+Mostly Pay as you go but paying u[front can give big discounts!
+
+![alt](https://fayedigital.com/wp-content/uploads/2022/10/Cloud-Computing-Service-Models.jpg)
+
 
 ## What sorts of things do you usually need to pay for when using the cloud?
 
