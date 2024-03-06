@@ -35,7 +35,6 @@ Databases: These are like organized filing cabinets in the cloud. Choose from fa
 
 
 
-
 3. Other Service Areas:
 
 Beyond the core services, Azure offers a vast range of additional services catering to specific needs:
@@ -77,4 +76,8 @@ Development and Integration: Services to streamline development workflows and in
     * This helps you identify areas for potential cost reduction
     
 
+
+<center> Azure Virtual Machines <center/>
+
+![Image Alt text](./images/v.%20your%20public%20address.png)
 
