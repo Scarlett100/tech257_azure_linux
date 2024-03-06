@@ -37,6 +37,9 @@ Streaming services:  From music and movies to video games, cloud computing power
 
 ## What are the different types of cloud service?
 
+![alt text](https://cdn1.plesk.com/wp-content/uploads/2018/07/02113945/large-visual-1.jpg)
+
+
 * Infrastructure as a service
 * platform as a service 
 * Software as a service
@@ -92,9 +95,6 @@ Pay as you go: You pay for what you use, no upfront costs.
 
 Within the cloud you may need to pay for database useage, bucket useage, virtual machine useage, VPC, VPN useage. Another useage.
 
-
-
-# Licenses
 
 GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007

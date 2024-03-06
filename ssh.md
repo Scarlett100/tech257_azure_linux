@@ -37,7 +37,7 @@ eval `ssh-agent`
 ``` 
 ssh-add ~/.ssh/<key name> 
 ``` 
- must run every time on a new terminal to register key!!! start with this, doesn’t matter where you are in file structure
+ must run every time on a new terminal to register key!!! start with this, doesn’t matter where you are in file structure. We unlock the private key, so we specify that.
  ``` 
 
   ## 5. Lets test our connection!
