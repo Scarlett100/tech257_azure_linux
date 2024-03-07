@@ -14,9 +14,9 @@
   - [Here is one line from the ls -l. Work out everything you can about permissions on this file or directory.](#here-is-one-line-from-the-ls--l-work-out-everything-you-can-about-permissions-on-this-file-or-directory)
   - [What numeric values are assigned to each permission?](#what-numeric-values-are-assigned-to-each-permission)
   - [What can you with the values assign read + write permissions?](#what-can-you-with-the-values-assign-read--write-permissions)
-  - [What value would assign read, write and execute permissions?](#what-value-would-assign-read-write-and-execute-permissions)
-  - [What value would assign read and execute permissions?](#what-value-would-assign-read-and-execute-permissions)
-  - [Often, a file or directory's mode/permissions are represented by 3 numbers. What do you think 644 would mean?](#often-a-file-or-directorys-modepermissions-are-represented-by-3-numbers-what-do-you-think-644-would-mean)
+    - [What value would assign read, write and execute permissions?](#what-value-would-assign-read-write-and-execute-permissions)
+    - [What value would assign read and execute permissions?](#what-value-would-assign-read-and-execute-permissions)
+    - [Often, a file or directory's mode/permissions are represented by 3 numbers. What do you think 644 would mean?](#often-a-file-or-directorys-modepermissions-are-represented-by-3-numbers-what-do-you-think-644-would-mean)
 - [References](#references)
 
 #2.8a
@@ -108,12 +108,13 @@ Delete or rename files within a directory (provided you have the necessary permi
 
 
 
-## What value would assign read, write and execute permissions?
-## What value would assign read and execute permissions?
-## Often, a file or directory's mode/permissions are represented by 3 numbers. What do you think 644 would mean?
+### What value would assign read, write and execute permissions?
+### What value would assign read and execute permissions?
+### Often, a file or directory's mode/permissions are represented by 3 numbers. What do you think 644 would mean?
 
 
 # References
+please see references for info below
 
 https://www.baeldung.com/linux/new-files-dirs-default-permission#:~:text=The%20operations%20that%20a%20user,%2C%20and%20execute%20permissions%2C%20respectively.
 https://www.ibm.com/docs/en/aix/7.2?topic=c-chown-command#:~:text=Description,group%20can%20also%20be%20specified.
