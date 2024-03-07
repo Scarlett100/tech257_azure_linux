@@ -29,20 +29,15 @@ Software as a Service (SaaS):  This category provides access to pre-built applic
 
 These services form the foundation for building and deploying cloud solutions on Azure. They include:
 
-Compute: Services for creating and managing virtual machines (VMs), containers, and serverless functions.
-Storage: Solutions for storing data in various forms, including blobs, disks, databases, and archival storage.
-Networking: Tools for creating and managing virtual networks, firewalls, load balancers, and other network components.
-Databases: A variety of managed database services, including relational databases like SQL Database and NoSQL databases like Cosmos DB.
+Compute: Services for creating and managing virtual machines (a powerful, portable pc inside of a pc), containers (a house to store everything), and serverless functions(code that runs on-demand). <br> 
+
+Storage: Solutions for storing data in various forms, including blobs, disks (documents), databases, and archival storage.
+<br>
+Networking: Tools for creating and managing virtual networks, firewalls, load balancers, and other network components. An easy way to remember networking is like a bridge or a highway, connecting you to different cities. In this situation it is connecting to different parts of the cloud whilst controling who has access to what through the firewalls and load balancers.
 
 
-The Cloud Building Blocks:
-
-Compute: Imagine these as the brains of your cloud applications. You can create virtual machines (like powerful PCs), containers (smaller, focused tasks), or serverless functions (code that runs on-demand) depending on your needs.
-Storage: This is your cloud filing cabinet! Store all kinds of data, from pictures (blobs) to documents (disks) to organized information (databases).
-Networking: Think of this as the cloud's highways and bridges. Connect all your cloud parts (VMs, databases, etc.) and control who can access them with firewalls and load balancers.
-Databases: These are like organized filing cabinets in the cloud. Choose from familiar ones like SQL Database or more flexible options like Cosmos DB for different types of data.
-
-
+<br>
+Databases: A variety of managed database services, including relational databases like SQL Database and NoSQL databases like Cosmos DB and other options for different types of data. An easy way to remember databases is like  a very organised filing cabinet.
 
 
 3. Other Service Areas:
@@ -50,10 +45,15 @@ Databases: These are like organized filing cabinets in the cloud. Choose from fa
 Beyond the core services, Azure offers a vast range of additional services catering to specific needs:
 
 Machine Learning and Artificial Intelligence (AI): Services to build, train, and deploy machine learning models and leverage AI capabilities.
+<br>
 Internet of Things (IoT): Tools to connect, manage, and analyze data from IoT devices.
+<br>
 Migration and Management: Services to assist with migrating existing workloads to Azure and managing them effectively.
+<br>
 Security: A comprehensive suite of security services for protecting your data and applications in the cloud.
+<br>
 Data Management and Analytics: Tools for storing, managing, and analyzing large datasets.
+<br>
 Development and Integration: Services to streamline development workflows and integrate different applications and services.
 
 ## What types/categories of services does Azure provide?
@@ -91,9 +91,5 @@ Development and Integration: Services to streamline development workflows and in
     
 
 
-<center> Azure Virtual Machines <center/>
 
-
-
-1: Region
 
