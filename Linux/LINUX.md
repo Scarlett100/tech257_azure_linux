@@ -1,6 +1,26 @@
 # LINUX
 
-Linux is a clone of Unix. Unix used to be used on large mainframes, but linux can be used on small devices. Always logs you into the home directory.
+- [LINUX](#linux)
+    - [How to find out where you are: Present Working Directory.](#how-to-find-out-where-you-are-present-working-directory)
+    - [how to find out user](#how-to-find-out-user)
+    - [how to list files](#how-to-list-files)
+    - [how to list hidden files](#how-to-list-hidden-files)
+    - [How to disconnect from vm (if you are on)](#how-to-disconnect-from-vm-if-you-are-on)
+    - [How to see what commands you have used.](#how-to-see-what-commands-you-have-used)
+    - [to run an old command in history eg. in your history command 5](#to-run-an-old-command-in-history-eg-in-your-history-command-5)
+- [  Navigating files and folder ](#--navigating-files-and-folder-)
+    - [Root vs Home](#root-vs-home)
+    - [Curl](#curl)
+- [rename file](#rename-file)
+- [removing file](#removing-file)
+- [Help](#help)
+- [Remove](#remove)
+- [Making files with spaces in them](#making-files-with-spaces-in-them)
+- [Grep](#grep)
+- [Update and upgrade](#update-and-upgrade)
+- [Tree](#tree)
+- [Move a file](#move-a-file)
+- [minitask](#minitask)
 
 ### How to find out where you are: Present Working Directory.
 ``` 
@@ -150,12 +170,15 @@ the two folder you may have made with mkdir my pictures you can do
 
 rm --help
 <command need help with> --help
-rm -d? ****lookk into that**
+
 
 # Remove
 
+The rm command is used to remove files you no longer need.
 ``` 
 rm -r my <-- a little dangerous, better to manually delete file.
+
+rm -i <directoryname>/* <-- if you have a directory you can delete every file 1 by 1, as each name appears, type y for yes, to keep it just press enter instead.
 ``` 
 # Making files with spaces in them
 

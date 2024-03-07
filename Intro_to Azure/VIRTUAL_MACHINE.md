@@ -17,7 +17,7 @@ The portal can be accessed below
 
 
 
-First we a generated new key.
+First we a generated new key. 
 ``` 
  ssh-keygen -t rsa -b 4096 -C "m.scarlettstewart@gmail.com
 cat test_again_key.pub
