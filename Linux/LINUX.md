@@ -21,6 +21,8 @@
 - [Tree](#tree)
 - [Move a file](#move-a-file)
 - [minitask](#minitask)
+- [find out details about your operating system](#find-out-details-about-your-operating-system)
+- [how to get date:](#how-to-get-date)
 
 ### How to find out where you are: Present Working Directory.
 ``` 
@@ -269,3 +271,16 @@ rm -r funny_stuff/
 * note that mv renames and moves
 
 to leave, exit on terminal then stop machine on azure console.
+
+# find out details about your operating system
+
+```
+uname
+uname -a # gives you more details
+uname --all # gives you more details
+```
+# how to get date:
+
+```
+date
+```
