@@ -20,11 +20,11 @@
     - [Often, a file or directory's mode/permissions are represented by 3 numbers. What do you think 644 would mean?](#often-a-file-or-directorys-modepermissions-are-represented-by-3-numbers-what-do-you-think-644-would-mean)
 - [Task 2.8d: Linux - Research changing file permissions](#task-28d-linux---research-changing-file-permissions)
   - [What command changes file permissions?](#what-command-changes-file-permissions)
-  - [To change permissions on a file what must the end user be? (2 answers)](#to-change-permissions-on-a-file-what-must-the-end-user-be-2-answers)
+  - [To change permissions on a file what must the end user be? ](#to-change-permissions-on-a-file-what-must-the-end-user-be-)
   - [Give examples of some different ways/syntaxes to set permissions on a new file (named testfile.txt) to:](#give-examples-of-some-different-wayssyntaxes-to-set-permissions-on-a-new-file-named-testfiletxt-to)
-  - [Set User to read, Group to read + write + execute, and Other to read and write only](#set-user-to-read-group-to-read--write--execute-and-other-to-read-and-write-only)
-  - [Add execute permissions (to all entities)](#add-execute-permissions-to-all-entities)
-  - [Take write permissions away from Group](#take-write-permissions-away-from-group)
+    - [Set User to read, Group to read + write + execute, and Other to read and write only:](#set-user-to-read-group-to-read--write--execute-and-other-to-read-and-write-only)
+  - [Add execute permissions (to all entities):](#add-execute-permissions-to-all-entities)
+  - [Take write permissions away from Group:](#take-write-permissions-away-from-group)
 - [References](#references)
 
 #2.8a
@@ -142,25 +142,57 @@ Delete or rename files within a directory (provided you have the necessary permi
 4 = read other
 
 # Task 2.8d: Linux - Research changing file permissions
-## What command changes file permissions?
-## To change permissions on a file what must the end user be? (2 answers)
-## Give examples of some different ways/syntaxes to set permissions on a new file (named testfile.txt) to:
-## Set User to read, Group to read + write + execute, and Other to read and write only
-## Add execute permissions (to all entities)
-## Take write permissions away from Group
 
-Use numeric values to give read + write access to User, read access to Group, and no access to Other.
+## What command changes file permissions?
+chmod can be used to change file permissions. <br>
 ``` 
-   chmod 640 testfile.txt
+# remove group write access to readme.txt
+chmod g-w readme.txt 
+
+``` 
+<br>
+
+## To change permissions on a file what must the end user be? <br>
+To change file permissions only two types of end users have the power to change permissions. The end user must be either a: <br>
+* A superuser <br>
+* The current file owner. <br>
+
+## Give examples of some different ways/syntaxes to set permissions on a new file (named testfile.txt) to:
+### Set User to read, Group to read + write + execute, and Other to read and write only:
+
+  * chmod u+r, g+rwx, o+rw testfile.txt <br>
+  * chmod u=r,g=rwx,o=rw testfile.txt <br>
+
+  
+## Add execute permissions (to all entities):
+
+  ```
+  * chmod a+x testfile.txt
+  ```
+  
+
+## Take write permissions away from Group:
+
+```
+chmod g-w testfile.txt
+```
+
+Use numeric values to give read + write access to User, read access to Group, and no access to other.
+
+
+640
+``` 
+chmod 640 testfile.txt
 ``` 
 
 # References
 please see references for info below
 
-https://www.baeldung.com/linux/new-files-dirs-default-permission#:~:text=The%20operations%20that%20a%20user,%2C%20and%20execute%20permissions%2C%20respectively.
-https://www.ibm.com/docs/en/aix/7.2?topic=c-chown-command#:~:text=Description,group%20can%20also%20be%20specified.
-https://www.maths.cam.ac.uk/computing/linux/unixinfo/perms#:~:text=644%20means%20you%20can%20read,users%20can%20only%20read%20it.
-
+* https://www.baeldung.com/linux/new-files-dirs-default-permission#:~:text=The%20operations%20that%20a%20user,%2C%20and%20execute%20permissions%2C%20respectively.<br>
+https://www.ibm.com/docs/en/aix/7.2?topic=c-chown-command#:~:text=Description,group%20can%20also%20be%20specified.<br>
+* https://www.maths.cam.ac.uk/computing/linux/unixinfo/perms#:~:text=644%20means%20you%20can%20read,users%20can%20only%20read%20it.<br>
+* https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/how-permissions-chmod-with-numbers-command-explained-777-rwx-unix <br>
+* https://docs.oracle.com/cd/E19683-01/816-4883/6mb2joat4/index.html#:~:text=Only%20the%20current%20owner%20or,on%20a%20file%20or%20directory.
 
 
 
