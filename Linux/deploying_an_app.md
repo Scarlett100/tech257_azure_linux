@@ -44,9 +44,12 @@ systemctl status nginx
 ```
 https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
 sudo apt-get install -y nodejs
+```
 
-. ```
+
+
 ![alt text](<../images/Node.js v20.x.png>)
+
 
 
 4. right version of node js 
@@ -54,36 +57,46 @@ sudo apt-get install -y nodejs
 
 1. ‘app’ folder with code - ISSUE 3 FIND OUT TO COPY APP FOLDER TO VM
 2. in app folder, we need to do 2 commands:
+```
     1. npm install
     2. npm start OR node.js
+```
 
 
 log out of vm
-run command to copy app folder to virtual maching
-first way:
-scp or rsync
+run command to copy app folder to virtual machine:
 
-create a git repo:
-for sole purpose of storing app folder call repo tech257-sparta-app
-(git clone)
-
-
+The scp command can be run to copy files from one folder to another, it takes quite a while.
+```
 scp -i /c/Users/username/.ssh/private_key -r /c/Users/username/Downloads/app username@public-ip:/path/to/save
 
 scp -i ~/.ssh/morgan-az-key -r app2 adminuser@172.167.181.33:.
 
 ```
+
 ![alt text](../images/mv_file.png)
+
+rsync seemed to be a quicker version, however, I came up with some difficulties,as it did not show on my vm, so went back to scp, which took some time. However, if you did want to use rsync the below would work.
+
+```
+rsync -avz -e "ssh -i ~/.ssh/morgan-az-key" ./app2 adminuser@172.167.181.33:.:.
 ```
 
-rsync -avz -e "ssh -i ~/.ssh/morgan-az-key" ./app2 adminuser@172.167.181.33:.:.
+After app has copied do npm install, then npm start npm --version within app folder
 
-after app copied do npm install, then npm start npm --version within app folder
 
-ip addy : 3000
+To then check that this works put the following into your broswer and you should get the below:
+
+* <ip_address: 3000>
+
+You should then get a page that shows Sparta.
+
+
 
 ## git way
 run this
+
+
 git remote add origin https://github.com/Scarlett100/tech257-sparta-app.git
 git branch -M master
 git push -u origin master
