@@ -27,5 +27,7 @@ custom port 3000 and HTTP port 80.
 ![alt text](<../images/Create network security group.png>)
 
 
+Once we have chosen all components we can see the setup, because we made ours whilst making a vm, we also recieve those details.
 
 
+![alt text](<../images/Computer name.png>)

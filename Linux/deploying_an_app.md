@@ -96,9 +96,15 @@ You should then get a page that shows Sparta.
 ## git way
 run this
 
+# 1. make a repository
+
+tech257-sparta-app
+
+* git init in repo and push repo to git.
 
 git remote add origin https://github.com/Scarlett100/tech257-sparta-app.git
 git branch -M master
 git push -u origin master
 
-to copy onto vm
+to copy onto vm we will clone using https.
+![alt text](../images/gitclonehttps.png)
