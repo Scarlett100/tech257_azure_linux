@@ -28,3 +28,9 @@ Next, go to vm on azure interface, go to overview, click capture,
     the option to change is azure compute gallery: no,capture only a managed gallery (change to this)
 
     call it name_of_vm_first image
+
+# Document process of automating deployment of an app
+
+
+# remove image + vm + its parts
+
