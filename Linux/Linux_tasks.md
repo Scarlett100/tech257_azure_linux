@@ -1,6 +1,7 @@
 # Linux tasks
 
 - [Linux tasks](#linux-tasks)
+- [Task 2.8a: Linux - Research managing file ownership](#task-28a-linux---research-managing-file-ownership)
   - [Why is managing file ownership important?](#why-is-managing-file-ownership-important)
   - [What is the command to view file ownership?](#what-is-the-command-to-view-file-ownership)
   - [What permissions are set when a user creates a file or directory? Who does file or directory belong to?](#what-permissions-are-set-when-a-user-creates-a-file-or-directory-who-does-file-or-directory-belong-to)
@@ -13,6 +14,7 @@
   - [If you give permissions to the Other entity, what does this mean?](#if-you-give-permissions-to-the-other-entity-what-does-this-mean)
   - [You give the following permissions to a \[file: Use\](file: Us "‌")r permissions are read-only, Group permissions are read and write, Other permissions are read, write and execute. You are logged in as the user which is owner of the file. What permissions will you have on this file? Explain.](#you-give-the-following-permissions-to-a-file-usefile-us-r-permissions-are-read-only-group-permissions-are-read-and-write-other-permissions-are-read-write-and-execute-you-are-logged-in-as-the-user-which-is-owner-of-the-file-what-permissions-will-you-have-on-this-file-explain)
   - [Here is one line from the ls -l. Work out everything you can about permissions on this file or directory.](#here-is-one-line-from-the-ls--l-work-out-everything-you-can-about-permissions-on-this-file-or-directory)
+- [Task 2.8c: Linux - Research managing file permissions using numeric values ](#task-28c-linux---research-managing-file-permissions-using-numeric-values-)
   - [What numeric values are assigned to each permission?](#what-numeric-values-are-assigned-to-each-permission)
   - [What can you with the values assign read + write permissions?](#what-can-you-with-the-values-assign-read--write-permissions)
     - [What value would assign read, write and execute permissions?](#what-value-would-assign-read-write-and-execute-permissions)
@@ -27,7 +29,7 @@
   - [Take write permissions away from Group:](#take-write-permissions-away-from-group)
 - [References](#references)
 
-#2.8a
+# Task 2.8a: Linux - Research managing file ownership
 
 ## Why is managing file ownership important?
 Managing files is very important because it is pivotal concerning fill access and therefore maintanance of security.  
@@ -95,7 +97,7 @@ Group is called staff, staff have read and execute but not write.
 - second 3 are r - x for group (read, not write, execute) <second are group>
   last 3 are for other they have (read, not write, not execute)<third are other (everyone else)>
 
-#2.8c
+# Task 2.8c: Linux - Research managing file permissions using numeric values <br>
 ## What numeric values are assigned to each permission?
 
 Read (r): 4 <br>
