@@ -72,6 +72,12 @@ scp -i /c/Users/username/.ssh/private_key -r /c/Users/username/Downloads/app use
 
 scp -i ~/.ssh/morgan-az-key -r app2 adminuser@172.167.181.33:.
 
+after the -i you must give keypath to private key <br>
+r is recurssive 
+folder to copy
+log in as user and ip
+automatically goes to home folder
+. means putting the file in current directory (pwd)
 ```
 
 ![alt text](../images/mv_file.png)
@@ -108,3 +114,38 @@ git push -u origin master
 
 to copy onto vm we will clone using https.
 ![alt text](../images/gitclonehttps.png)
+
+put the script in the vm
+```
+chmod +x deploy.sh <--- give executable permissions>
+./deploy..sh <--running my script
+```
+
+![alt text](../images/app_listening.png)![alt text]<br>
+
+as you can see below, the app is running correctly once i put the IP address followed by port 3000.
+```
+the <ip_address>:3000
+```
+
+![alt text](../images/Sparta.png)
+
+If running manually no need to do pm2.
+
+it is important that we restart nginx because sometimes we may make changes to nginx and if 
+
+
+So to make sure pm2 runs in background, you should #npm start line otherwise it will not run in background. when you have pm2 properly running in background, your terminal will look like this once done.
+
+![alt text](../images/properly.png)
+
+I must now find a way to add to my script to make sure pm2 strops running if already running.
+
+![alt text](../images/pm2_already_running.png)
+
+To do that I had to do : 
+
+```
+pm2 stop app.js
+```
+![alt text](../images/process_pm2.png)
