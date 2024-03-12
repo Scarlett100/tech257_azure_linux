@@ -43,3 +43,9 @@ Once succesful you will get the below message:
 and you can go to your browser and enter your azure ip (not the 127.0.0.1) entered in default and you will get the below:
 
 ![alt text](../images/manual_reverse_proxy.png)
+
+
+To automate it within our script we must put the below after we install :
+
+sudo sed -i "s|try_files .*;|proxy_pass http://127.0.0.1:3000;|g" /etc/nginx/sites-available/default
+

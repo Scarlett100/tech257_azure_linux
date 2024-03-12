@@ -118,7 +118,7 @@ to copy onto vm we will clone using https.
 put the script in the vm
 ```
 chmod +x deploy.sh <--- give executable permissions>
-./deploy..sh <--running my script
+./deploy.sh <--running my script
 ```
 
 ![alt text](../images/app_listening.png)![alt text]<br>

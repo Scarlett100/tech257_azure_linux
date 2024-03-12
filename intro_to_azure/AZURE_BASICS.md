@@ -1,11 +1,28 @@
 
 # <center>The basics of Azure<center/>
 
+Azure, is the microsoft platform for cloud computing. It is an equivalent of AWS.
+
 Azure regions and availability zones: how they work and include up-to-date diagrams to help
+
+Regions: A region is a geographical area that contains one or more data centers. Each region is independent and has its own set of services, resources, and network infrastructure.
+
+An availability zone is a physically separate data center within a region that is designed to be available and fault tolerant.Azure has at least three availability zones in each region and defined by unique name as "Zone 1" or "Zone 2".
 
 ## How is Azure structured/organised (resources you create on there)?
 
 ##  <center> simple architecture <center/>
+
+![alt text](../images/Management.png)
+
+root management group: different scopes, at each level, can set access + policies.
+different scopes eg. At each level, can set access and policies. both access and policies restrict what a user can do, just differently.
+Management groups are like folders - 6 levels.
+Resource groups are like containers
+subscriptions separate payment accounts. But subscriptions have limits/quotas. eg. only 50x vm's.
+
+
+
 
 ![azure](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/enterprise-integration/_images/simple-enterprise-integration.png)
 
@@ -56,6 +73,7 @@ Data Management and Analytics: Tools for storing, managing, and analyzing large 
 <br>
 Development and Integration: Services to streamline development workflows and integrate different applications and services.
 
+For DevOps: For private companies with very granualr security, for example CI/CD or IAC.
 ## What types/categories of services does Azure provide?
 
 # <center> The Azure Pricing Calculator? </center>
@@ -73,6 +91,8 @@ Development and Integration: Services to streamline development workflows and in
     * calculator helps you estimate the potential costs for specific Azure services for your use case.<br>
     * Gets you a breakdown of costs once you enter resources such as instance types, database needs etc.<br>
     * Can now plan and adjust cloud budget realistically and accurately. Allowing for informed decisions.<br>
+    * So there are no suprises!
+  * 
 
 
 * **Service Comparison**: <br> 
