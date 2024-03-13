@@ -1,3 +1,17 @@
+
+# Manually connect database and VM
+
+- [Manually connect database and VM](#manually-connect-database-and-vm)
+- [Manually work out each command](#manually-work-out-each-command)
+- [install mongo db](#install-mongo-db)
+- [In app vm](#in-app-vm)
+- [NPM Install](#npm-install)
+- [references](#references)
+
+
+
+
+
 Go through the process we did with the app VM to deploy the app, but now to deploy the database:
 
 when we create vm we must use the
@@ -71,11 +85,19 @@ will see that it is running.
 
 ![alt text](<../Linux/Screenshot 2024-03-13 at 12.45.59.png>)
 
-don't need to do if we have app folder in home directpry but since i do we must ass the **-E**
+# NPM Install
 
+If we just run npm install from where we are it will fail.
+
+
+![alt text](<../Linux/Screenshot 2024-03-13 at 13.08.43.png>)
+
+don't need to do if we have app folder in home directpry but since i do we must ass the **-E**
 sudo -E npm install
 
 sudo -E npm start
+![alt text](<../Linux/Screenshot 2024-03-13 at 13.09.43.png>)
+
 
 App will now be back up running
 
@@ -86,28 +108,6 @@ and we will see app is back online and post page works once we add /posts to the
 ![alt text](<../Linux/Screenshot 2024-03-13 at 12.52.55.png>)
 
 
-Automate with a Bash script
-
-
-
-Automate user data
-
-
-Automate with custom image (you should not need a little bit of user data like the app VM because mongo DB will be enabled)
-
-Requirements for the database VM
-
-Ports that need to be open: SSH
-
-Should go in private-subnet
-
-Update & upgrade
-
-Install Mongo DB 7.0.5 (rather than just the latest version).  However, you might install the latest version initially as it does work.
-
-Configure Mongo DB's bindIp to be 0.0.0.0 (accept connections from anywhere)
-
-Make sure Mongo DB service is started + enabled
 
 
 # references
