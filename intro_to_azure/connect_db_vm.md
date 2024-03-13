@@ -5,9 +5,10 @@
 
 
 - [Manually connect database and VM](#manually-connect-database-and-vm)
+- [create db vm](#create-db-vm)
 - [Manually work out each command](#manually-work-out-each-command)
-- [install mongo db](#install-mongo-db)
-- [edit bind file in vim:](#edit-bind-file-in-vim)
+- [Install mongo db](#install-mongo-db)
+- [Edit bind file in vim:](#edit-bind-file-in-vim)
 - [In app vm](#in-app-vm)
 - [NPM Install](#npm-install)
 - [Check application](#check-application)
@@ -20,11 +21,20 @@
 
 The goal with this task is to get /posts page working manually to do this, we will need to to deploy a database and connect a database vm and our app vm through an environment variable that houses our private IP.
 
-when we create vm we must use the
+# create db vm
+
+There are a few things to note:
+1. private subnet
+2. using ramons image for now
+3. only using ssh port
+ <br>
+
+ As you can see below, the validation passed.
+   
 ![alt text](<../images/Screenshot 2024-03-13 at 11.59.06.png>)
 # Manually work out each command
 
-once I had ssh'd into my vm I ran an update and upgrade:
+Once I had ssh'd into my vm I ran an update and upgrade:
  ``` 
 # Update
 sudo apt update -y
@@ -34,7 +44,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 
  ``` 
 
-# install mongo db
+# Install mongo db
 
 ``` 
 # install curl
@@ -57,25 +67,25 @@ sudo apt-get update -y
 sudo apt-get install -y mongodb-org=7.0.6 mongodb-org-database=7.0.6 mongodb-org-server=7.0.6 mongodb-mongosh=2.1.5 mongodb-org-mongos=7.0.6 mongodb-org-tools=7.0.6
 ``` 
 
-# edit bind file in vim:
+# Edit bind file in vim:
 
 ``` 
 sudo vim /etc/mongod.conf
-change bind ip to all 0's
+change bind ip to all 0's so that we have the correct bind IP
 
 check changes made
 cat /etc/mongod.conf
 
 # check status again:
 sudo systemctl status mongod
-will see that it is running.
+You will see that it is running, as seen in photo below.
 ``` 
 
 ![alt text](<../images/Screenshot 2024-03-13 at 12.23.39.png>)
 
 
 # In app vm
- next we in another terminal and ssh into our app terminal and run:
+ Next we in another terminal and ssh into our app vm (remember we are using the public ip) and run:
 
  ``` 
 
@@ -83,13 +93,12 @@ will see that it is running.
 
  export DB_HOST=mongodb://10.0.3.5:27017/posts
 
- Note, that we use the *private* ip of the db vm.
+Note, that we use the *private* ip of the db vm.
 Also note, in our script, we may not want to connect to db, so we can comment this DB_HOST line out.
 
 
  Check env variable has been set
- ``` 
- printenv DB_HOST 
+ ``` printenv DB_HOST 
 
 ``` 
 
