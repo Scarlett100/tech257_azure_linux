@@ -4,8 +4,10 @@
 
 
 
+The goal with this task is to get /posts page working manually to do this, we will need to to deploy a database and connect a database vm and our app vm through an environment variable that houses our private IP.
+
 - [Manually connect database and VM](#manually-connect-database-and-vm)
-- [create db vm](#create-db-vm)
+- [Create db vm](#create-db-vm)
 - [Manually work out each command](#manually-work-out-each-command)
 - [Install mongo db](#install-mongo-db)
 - [Edit bind file in vim:](#edit-bind-file-in-vim)
@@ -19,9 +21,7 @@
 
 
 
-The goal with this task is to get /posts page working manually to do this, we will need to to deploy a database and connect a database vm and our app vm through an environment variable that houses our private IP.
-
-# create db vm
+# Create db vm
 
 There are a few things to note:
 1. private subnet
