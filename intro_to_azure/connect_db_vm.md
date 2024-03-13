@@ -114,7 +114,7 @@ ps aux
 
  ``` 
  sudo kill 968 <968 is pm2 process id>
- 
+
   ``` 
 
 
@@ -122,28 +122,32 @@ ps aux
 
 # NPM Install
 
-If we just run npm install from where we are it will fail.
+If we just run the usual npm install command from where we are in folder structure it will fail.
 
 
 ![alt text](<../Linux/Screenshot 2024-03-13 at 13.08.43.png>)
 
-don't need to do if we have app folder in home directory but since i do we must ass the **-E**
+If we have app folder in home directory, this next step with sudo -E is not necessary,  but since I do not have app folder in home directory I must add an **-E** tag
+
+  ``` 
 sudo -E npm install
 
 sudo -E npm start
+  ``` 
+
 ![alt text](<../Linux/Screenshot 2024-03-13 at 13.09.43.png>)
 
 
 # Check application
 
 
-App will now be back up running
+App will now be back up running if we put the public ip of app vm into our browser.
 
 ![alt text](<../Linux/Screenshot 2024-03-13 at 12.53.56.png>)
 
 # Check application with database
 
-and we will see app is back online and post page works once we add /posts to the end of ip
+We will see app is back online and post page works once we add /posts to the end of ip in browser.
 
 ![alt text](<../Linux/Screenshot 2024-03-13 at 12.52.55.png>)
 
