@@ -1,9 +1,84 @@
 
+- [script update](#script-update)
+- [deprovision](#deprovision)
 - [1. Create an image](#1-create-an-image)
 - [2. Make sure dependencies are installed](#2-make-sure-dependencies-are-installed)
 - [3. Create a new vm](#3-create-a-new-vm)
 - [4. Import section of bash script](#4-import-section-of-bash-script)
 - [5. Blockers](#5-blockers)
+
+
+
+# script update
+
+First we made a vm and inputed user data. Below is my script:
+
+``` 
+
+#!/bin/bash
+
+# Update
+sudo apt update -y
+
+#  upgrade for bypassing user input
+sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -yq
+
+# Install nginx
+sudo apt install -y nginx
+
+#reverse proxy 
+sudo sed -i "s|try_files .*;|proxy_pass http://127.0.0.1:3000;|g" /etc/nginx/sites-available/default
+
+# Restart nginx
+sudo systemctl restart nginx
+
+# Enable nginx
+sudo systemctl enable nginx
+
+# cd into root so it clones there on our vm
+cd /
+
+# Git Clone
+git clone https://github.com/Scarlett100/tech257-sparta-app.git
+
+# Install Node.js and npm
+curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# CD into app2 folder
+cd tech257-sparta-app/app2
+
+# Install npm dependencies
+npm install
+
+# Start npm (can also use node.js)
+#npm start <-- not needed if doing pm2, because script will never reach pm2 if npm is started.
+
+# Install pm2
+sudo npm install pm2@latest -g
+
+#stopPm2 before rerunning.
+pm2 stop app.js
+
+# Start app with pm2
+pm2 start app.js
+``` 
+
+# deprovision
+
+Next once that was up and running and working we had too :
+
+2. run the command to deprovision user
+    sudo waagent -deprovision+user 
+3. type yes
+
+
+Next we had to stop the vm, and generalise the vm so that we could creae a new image.
+
+this can be done manually on the interfaceor by running the command:
+``` 
+ az vm generalize --resource-group <yourResourceGroup> --name <yourVMName>
+ ``` 
 
 
 Our task was to be able to deploy an app with user data and with an image + a small amount of user data.
@@ -31,8 +106,25 @@ Next we had to use a small portion of your Bash script to paste into user data t
 
 cd into the app folder
 run the app
-![alt text](../images/userdatafomrimage.png)
+The contents of my bash script can be found below
+ ``` 
+#!/bin/bash
+
+# CD into app2 folder
+cd /tech257-sparta-app/app2
+
+#stopPm2 before rerunning.
+pm2 stop app.js
+
+# Start app with pm2
+pm2 start app.js
+ ``` 
+ App running:
+ As you can see below, the app is running!
+ 
+ ![alt text](<../images/Screenshot 2024-03-13 at 10.56.40.png>)
 
 # 5. Blockers
-As a blocker, I should have added a stop. Therefore, I will rebuild when I can and add stop. 
-I have not yet been able to run it but the desired outcome is that it should be much quicker.
+One of my big blockers was simply that in my script for my small user data input was that I forgot the shebang, so nothing worked and I could not figure out why, this took up a lot of time. finally after a while somebody in my group with the same issue, realised and we were all able to rectify our same issue.
+
+![alt text](../images/userdatafomrimage.png)
