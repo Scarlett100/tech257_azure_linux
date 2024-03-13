@@ -103,13 +103,18 @@ Also note, in our script, we may not want to connect to db, so we can comment th
 ``` 
 
 If we have used pm2 with user data, as we have it will not stop the process so we must first find the process id with 
-``` ps aux
+``` 
+ps aux
+
  ``` 
+
  <br>
  then we must find pm2, and kill it. To do this we must run:
  <br>
 
- ``` sudo kill 968 <968 is pm2 process id>
+ ``` 
+ sudo kill 968 <968 is pm2 process id>
+ 
   ``` 
 
 
