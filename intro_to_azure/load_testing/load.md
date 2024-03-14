@@ -45,6 +45,7 @@ as you can see via my dash board below:
 
 
 step one: alert rule
+<br>
 ![alt text](<Screenshot 2024-03-14 at 14.39.08.png>)
 
 
@@ -54,8 +55,9 @@ step two: quick actions
 ![alt text](<Screenshot 2024-03-14 at 14.44.42.png>)
 
 Our alert has been made as seen below:
+<br>
 
 ![alt text](<../blob_storage/Screenshot 2024-03-14 at 14.46.06.png>)
-
+<br>
 Lastly, as you can see below I have recieved my alert email:
 ![alt text](<Screenshot 2024-03-14 at 14.53.38.png>)
