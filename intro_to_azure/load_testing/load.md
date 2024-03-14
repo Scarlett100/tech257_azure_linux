@@ -41,7 +41,7 @@ as you can see via my dash board below:
 ![alt text](<Screenshot 2024-03-14 at 14.34.00.png>)
 
 
-Create a CPU usage alert for your app instance → you should get a notification sent your email
+# Create a CPU usage alert for your app instance 
 
 
 step one: alert rule
@@ -57,3 +57,5 @@ Our alert has been made as seen below:
 
 ![alt text](<../blob_storage/Screenshot 2024-03-14 at 14.46.06.png>)
 
+Lastly, as you can see below I have recieved my alert email:
+![alt text](<Screenshot 2024-03-14 at 14.53.38.png>)
