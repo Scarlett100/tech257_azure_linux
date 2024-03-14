@@ -1,0 +1,61 @@
+# Azure Monitor monitoring, alert management 
+
+# peak cpu
+
+# What is worst to best in terms of What is worst to best in terms of monitoring and responding to load/traffic.
+
+* A dashboard is also a way in which we can have in terms of monitoring and responding to load/traffic, however  its possible we may have missed it.
+* An alarm and notification would be the next best way
+* The best way to monitor and respond to load/traffic is through autoscaling.
+
+# How you setup a dashboard
+
+To set up a dashboard in Azure, you will need to follow the below steps.
+
+1. On your vm page go to overview > monitoring.
+ ![alt text](<Screenshot 2024-03-14 at 14.24.23.png>)
+
+2. Then scroll down and you will see some charts, on the chart you want click the pin icon.
+3. Once there you can choose *Create New* and choose a private or shared dashboard, in this case, I will choose shared, also pick a name.
+![alt text](<Screenshot 2024-03-14 at 14.24.23.png>)
+4. After this in the search bar, type and click on *dashboard hub*. Here you will see your dashboard, click on it.
+5. Now the desired charts that you have added will be available. you can drag and drop to place as you wish, don't forget to save!
+6. once on a specific chart you can change the time frame by clicking on the current timeframe in rioght hand corner and changing, confirming by clicking apply. This will then be further confirmed once you click *Save to dashboard*.
+   
+Here is my dashboard:
+![alt text](<Screenshot 2024-03-14 at 14.30.50.png>)
+
+# Include a screenshot of your dashboard when you manage to get it to stop responding through extreme load testing
+
+To load test we installed Apache Bench.
+ ```
+sudo apt-get install apache2-utils
+ ```
+
+# Apache Bench load Requests
+My dashboard stopped giving a response at this point, my requests were timing out: <br>
+Now to increase to 10,000 requests and increase speed to 200:
+ ```
+ab -n 10000 -c 200 http://172.166.126.201/
+ ```
+![alt text](<Screenshot 2024-03-14 at 14.03.57.png>)
+
+as you can see via my dash board below:
+![alt text](<Screenshot 2024-03-14 at 14.34.00.png>)
+
+
+Create a CPU usage alert for your app instance → you should get a notification sent your email
+
+
+step one: alert rule
+![alt text](<Screenshot 2024-03-14 at 14.39.08.png>)
+
+![alt text](<Screenshot 2024-03-14 at 14.40.38.png>)
+
+step two: quick actions
+![alt text](<Screenshot 2024-03-14 at 14.44.42.png>)
+
+Our alert has been made as seen below:
+
+![alt text](<../blob_storage/Screenshot 2024-03-14 at 14.46.06.png>)
+
