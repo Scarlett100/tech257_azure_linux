@@ -47,10 +47,10 @@ Create a CPU usage alert for your app instance → you should get a notification
 step one: alert rule
 ![alt text](<Screenshot 2024-03-14 at 14.39.08.png>)
 
-step two: quick actions
+
 ![alt text](<Screenshot 2024-03-14 at 14.40.38.png>)
 
-
+step two: quick actions
 ![alt text](<Screenshot 2024-03-14 at 14.44.42.png>)
 
 Our alert has been made as seen below:
