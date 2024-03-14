@@ -1,6 +1,10 @@
- #!/usr/bin/bash
+# Blob Task
 
- # change the ownership
+I have not had a chance to try my script but this is what I believe the app script will look like based on the requirements, I may need to change the order of some things, but will know once I run.
+
+# <center> Script plan <center/>
+ ```
+change the ownership
 sudo chown -R adminuser:adminuser /home/adminuser/tech257-sparta-app
 
 #full permissions over the directory and its contents
@@ -77,14 +81,6 @@ npm install
 
 #modify homepage file (index.ejs found in views folder) to include cat image in blob storage (could use sed command to replace )
 
-# first i did this by Define variables for storage account name, container name, and blob name
-#storage_account="tech257morganstorage"
-#container_name="testcontainer"
-#blob_name="newcat.jpg"
-
-# Generate the blob URL using the variables
-#blob_url="https://$storage_account.blob.core.windows.net/$container_name/$blob_name"
-
 sudo sed -i "/<h2>The app is running correctly.<\/h2>/a <img src=\"https://tech257morganstorage.blob.core.windows.net/testcontainer/newcat.jpg\">" /views/index.ejs
 
 # find out line before it again
@@ -101,3 +97,4 @@ pm2 stop app.js
 #start the app using pm2
 pm2 start app.js
 
+ ```
