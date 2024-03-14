@@ -1,6 +1,5 @@
 # Azure Monitor monitoring, alert management 
 
-# peak cpu
 
 # What is worst to best in terms of What is worst to best in terms of monitoring and responding to load/traffic.
 
@@ -17,7 +16,6 @@ To set up a dashboard in Azure, you will need to follow the below steps.
 
 2. Then scroll down and you will see some charts, on the chart you want click the pin icon.
 3. Once there you can choose *Create New* and choose a private or shared dashboard, in this case, I will choose shared, also pick a name.
-![alt text](<Screenshot 2024-03-14 at 14.24.23.png>)
 4. After this in the search bar, type and click on *dashboard hub*. Here you will see your dashboard, click on it.
 5. Now the desired charts that you have added will be available. you can drag and drop to place as you wish, don't forget to save!
 6. once on a specific chart you can change the time frame by clicking on the current timeframe in rioght hand corner and changing, confirming by clicking apply. This will then be further confirmed once you click *Save to dashboard*.
@@ -25,7 +23,6 @@ To set up a dashboard in Azure, you will need to follow the below steps.
 Here is my dashboard:
 ![alt text](<Screenshot 2024-03-14 at 14.30.50.png>)
 
-# Include a screenshot of your dashboard when you manage to get it to stop responding through extreme load testing
 
 To load test we installed Apache Bench.
  ```
@@ -50,9 +47,10 @@ Create a CPU usage alert for your app instance → you should get a notification
 step one: alert rule
 ![alt text](<Screenshot 2024-03-14 at 14.39.08.png>)
 
+step two: quick actions
 ![alt text](<Screenshot 2024-03-14 at 14.40.38.png>)
 
-step two: quick actions
+
 ![alt text](<Screenshot 2024-03-14 at 14.44.42.png>)
 
 Our alert has been made as seen below:
