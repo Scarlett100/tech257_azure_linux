@@ -4,7 +4,7 @@ I have not had a chance to try my script but this is what I believe the app scri
 
 # <center> Script plan <center/>
  ```
-change the ownership
+#change the ownership
 sudo chown -R adminuser:adminuser /home/adminuser/tech257-sparta-app
 
 #full permissions over the directory and its contents
