@@ -6,6 +6,7 @@
 - [3. Create a new vm](#3-create-a-new-vm)
 - [4. Import section of bash script](#4-import-section-of-bash-script)
 - [5. Blockers](#5-blockers)
+- [Update](#update)
 
 
 
@@ -128,3 +129,24 @@ pm2 start app.js
 One of my big blockers was simply that in my script for my small user data input was that I forgot the shebang, so nothing worked and I could not figure out why, this took up a lot of time. finally after a while somebody in my group with the same issue, realised and we were all able to rectify our same issue.
 
 ![alt text](../images/userdatafomrimage.png)
+
+
+# Update
+
+So when asked to do this again I had difficulty getting it working, eventually I was able too by doing the following:
+
+* Using the longer original script but inserting it as **user data** this time when making our first vm
+* Next was to ssh into vm, as I found app didn't work
+* Once I was ssh'd in I navigated to the app2 folder and ran two commands:
+``` 
+sudo pm2 kill
+sudo pm2 start app.js
+ ``` 
+* Once this had been done, I decommissioned the cm using the below command and continued as normal to make an image. 
+``` 
+sudo waagent -deprovision+user
+``` 
+
+Next I made the new vm, off off my new image and was able to import the same code as section 4, which worked and gave me a working app as seen below.
+<br>
+![alt text](<Screenshot 2024-03-14 at 18.35.18.png>)

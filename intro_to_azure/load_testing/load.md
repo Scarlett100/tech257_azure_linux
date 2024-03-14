@@ -61,3 +61,13 @@ Our alert has been made as seen below:
 <br>
 Lastly, as you can see below I have recieved my alert email:
 ![alt text](<Screenshot 2024-03-14 at 14.53.38.png>)
+
+# note
+I did create another one to show useage over 1%
+as seen below:
+
+![alt text](<Screenshot 2024-03-14 at 15.01.02.png>)
+
+here is my alert when it hit 1% :
+
+![alt text](<Screenshot 2024-03-14 at 15.10.47.png>)
