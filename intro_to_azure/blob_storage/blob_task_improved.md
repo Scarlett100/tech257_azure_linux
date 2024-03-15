@@ -1,11 +1,5 @@
 #!/usr/bin/bash
 
-# change the ownership
-sudo chown -R adminuser:adminuser /home/adminuser/tech257-sparta-app
-
-# full permissions over the directory and its contents
-sudo chmod -R 755 /home/adminuser/tech257-sparta-app
-
 
 # upgrade for bypassing user input
 sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -yq
@@ -14,11 +8,11 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -yq
 # Create a storage account
 az storage account create --name tech257morganstorage --resource-group tech257 --location uksouth --sku Standard_LRS  --allow-blob-public-access true
 
-#sleep for 15
+# sleep for 15
 
 sleep 15
 
-#enable anonymous blob access on storage account
+# enable anonymous blob access on storage account
 # added a  --allow-blob-public-access flag to storage account
 
 
@@ -26,7 +20,7 @@ sleep 15
  az storage container create \
     --account-name tech257morganstorage \
     --name testcontainer \
-    --public-access on \
+    --public-access container \
     --auth-mode login
 
 #az storage container set-permission to make blob public\
@@ -55,13 +49,21 @@ az storage blob upload \
 
 #make blob public <--command done with container
 
-#modify homepage file (index.ejs found in views folder) to include cat image in blob storage (could use sed command to replace )
+# cd to home
+cd /
 
-sudo sed -i "/<h2>The app is running correctly.<\/h2>/a <img src=\"https://tech257morganstorage.blob.core.windows.net/testcontainer/newcat.jpg\">" /views/index.ejs
+# CD into app2/views folder
+cd /tech257-sparta-app/app2/views
 
+# make a backup of this file
+sudo cp index.ejs index.ejs.bk
 
-# CD into app2 folder
-cd /tech257-sparta-app/app2
+# modify homepage file (index.ejs found in views folder) to include cat image in blob storage (could use sed command to replace )
+sudo sed -i "/<h2>The app is running correctly.<\/h2>/a <img src=\"https://tech257morganstorage.blob.core.windows.net/testcontainer/newcat.jpg\">" index.ejs
+
+# cd back to app folder
+cd ..
+
 
 # stopPm2 before rerunning.
 pm2 kill 

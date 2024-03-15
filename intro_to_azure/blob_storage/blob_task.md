@@ -1,29 +1,66 @@
 # Blob Task
 
-I have not had a chance to try my script but this is what I believe the app script will look like based on the requirements, I may need to change the order of some things, but will know once I run.
+So I had to edit my script a few times because it was not finding the index.ejs file. So I decided to make it very clear how to get to index file by cd'ing into folder instead of having views/index.ejs in sed file, just index.ejs. First we had to have the app running, then write a script to add the cat.
 
-# <center> Script plan <center/>
+you can see in my screenshot below, the cat is showing!
+
+![alt text](<Screenshot 2024-03-15 at 10.28.18.png>)
+
+# <center> Script <center/>
+
+One of the things i found incredibly useful, was on microsftf documents, it mentioned you can add access when creating containers and storage accounts.<br>
+For example at the end of making a storage account you can add 
  ```
-#!/usr/bin/bash
+ --allow-blob-public-access true
+ ```
+ you can see the full command below:
+ <br>
 
-# change the ownership
-sudo chown -R adminuser:adminuser /home/adminuser/tech257-sparta-app
+  ```
+# Create a storage account
+az storage account create \
+ --name tech257morganstorage \
+ --resource-group tech257 \
+ --location uksouth \
+ --sku Standard_LRS \
+ --allow-blob-public-access true
+ ```
 
-# full permissions over the directory and its contents
-sudo chmod -R 755 /home/adminuser/tech257-sparta-app
+ Likewise when making a container we can do the same, but it is imperative we also **set** the permission afterward. Note the ** --public-access container** flag. I made 
+
+ ```
+#create container
+ az storage container create \
+    --account-name tech257morganstorage \
+    --name testcontainer \
+    --public-access container \
+    --auth-mode login
+
+#az storage container set-permission to make blob public\
+az storage container set-permission \
+    --name testcontainer \
+    --account-name tech257morganstorage \
+    --public-access container \
+    --auth-mode login
+ ```
+# <center> working Script <center/>
+
+ ```
+ #!/usr/bin/bash
 
 
-# upgrade for bypassing user input
+# upgrade for bypassing user input, may not be needed but just in case
 sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -yq
 
 
 # Create a storage account
 az storage account create --name tech257morganstorage --resource-group tech257 --location uksouth --sku Standard_LRS  --allow-blob-public-access true
 
-#sleep for 15
+# sleep for 15
+
 sleep 15
 
-#enable anonymous blob access on storage account
+# enable anonymous blob access on storage account
 # added a  --allow-blob-public-access flag to storage account
 
 
@@ -31,7 +68,7 @@ sleep 15
  az storage container create \
     --account-name tech257morganstorage \
     --name testcontainer \
-    --public-access on \
+    --public-access container \
     --auth-mode login
 
 #az storage container set-permission to make blob public\
@@ -60,13 +97,21 @@ az storage blob upload \
 
 #make blob public <--command done with container
 
-#modify homepage file (index.ejs found in views folder) to include cat image in blob storage (could use sed command to replace )
+# cd to home
+cd /
 
-sudo sed -i "/<h2>The app is running correctly.<\/h2>/a <img src=\"https://tech257morganstorage.blob.core.windows.net/testcontainer/newcat.jpg\">" /views/index.ejs
+# CD into app2/views folder
+cd /tech257-sparta-app/app2/views
 
+# make a backup of this file
+sudo cp index.ejs index.ejs.bk
 
-# CD into app2 folder
-cd /tech257-sparta-app/app2
+# modify homepage file (index.ejs found in views folder) to include cat image in blob storage (could use sed command to replace )
+sudo sed -i "/<h2>The app is running correctly.<\/h2>/a <img src=\"https://tech257morganstorage.blob.core.windows.net/testcontainer/newcat.jpg\">" index.ejs
+
+# cd back to app folder
+cd ..
+
 
 # stopPm2 before rerunning.
 pm2 kill 
