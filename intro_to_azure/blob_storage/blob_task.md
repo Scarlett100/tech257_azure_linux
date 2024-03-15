@@ -8,7 +8,7 @@ you can see in my screenshot below, the cat is showing!
 
 # <center> Script <center/>
 
-One of the things i found incredibly useful, was on microsoft documents, it mentioned you can add access when creating containers and storage accounts.<br>
+One of the things I found incredibly useful, was on Microsoft documents, it mentioned you can add anonymous access when creating containers and storage accounts.<br>
 For example at the end of making a storage account you can add: 
  ```
  --allow-blob-public-access true
