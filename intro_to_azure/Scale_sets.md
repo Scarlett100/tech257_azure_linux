@@ -1,4 +1,4 @@
-<center> #Scale sets <center/>
+# <center> #Scale sets <center/>
 
 
 
@@ -111,6 +111,16 @@ If we look back at the instances, the unhealthy one has dissapeared and we only 
 ![alt text](<Screenshot 2024-03-15 at 16.11.33.png>)
 
 
+
+
+![alt text](<Screenshot 2024-03-15 at 15.04.47.png>)
+
+
+#
+If a vm doesn't work and it is still unhealthy after certain amount of time, the scale set will create a new one.![alt text](<Screenshot 2024-03-15 at 12.24.40.png>)
+
+
+
 # How to delete a vm scale set
 
 There are two options:
@@ -120,12 +130,4 @@ There are two options:
 There are 4 things we need to delete.
 load balancer
 vms
-
-
-
-
-![alt text](<Screenshot 2024-03-15 at 15.04.47.png>)
-
-
-#
-If a vm doesn't work and it is still unhealthy after certain amount of time, the scale set will create a new one.![alt text](<Screenshot 2024-03-15 at 12.24.40.png>)
+ip
