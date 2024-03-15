@@ -44,7 +44,7 @@ tags:
 ![alt text](<Screenshot 2024-03-15 at 15.04.47.png>)
 
 
-# <center> How to create an unhealthy image for testing <center/>
+# <center> unhealthy statuses<center/>
 The user data runs on the provisioning of a vm, so when you restart the user data the vm won't reload the user data. Likewise when you restart a scale set it just restarts the vm's associated. User data only runs once. As you can see below when we restart our vm's are unhealthy: 
 <br>
 ![alt text](<Screenshot 2024-03-15 at 15.22.56.png>)
@@ -66,15 +66,29 @@ If we refresh the load balancer ip we will find the app is back up, whwereas bef
 
 ![alt text](<Screenshot 2024-03-15 at 15.34.14.png>)
 
+If you want to get an unhealthy status again, you can restart instance, or start and stop instance. As you can see below I have restarted one instance and ended up with an unhealthy status:
+
+
+ ![alt text](<Screenshot 2024-03-15 at 15.44.08.png>)
 
 # <center>  How to ssh into instance <center/>
+Outside of the testing stage we shouldn't really ssh into our scaleset vm's.
+But if we must one way to do it is to first click on the instance we need, for this example I will use the vm that we restarted and is unhealthy. Once we click on it we must ssh into it.
+![alt text](<Screenshot 2024-03-15 at 15.48.37.png>)
 
+Once I put in my ssh details path it gives me a code to copy
+![alt text](<Screenshot 2024-03-15 at 15.52.46.png>)
+However it gives us a private ip, this would only work if we are on the same network.
+
+As you can see below, I have ssh'ed inside:
+<br>
+![alt text](<Screenshot 2024-03-15 at 16.04.23.png>)
 
 # How to delete a vm scale set
 
 There are two options:
 1. If you have tags then you can go into your resource group and delete everything with a tag associated with the scale set.
-2. you can manually select eveythin and begin to delete.
+2. You can manually select everything and begin to delete.
 
 
 
