@@ -8,12 +8,12 @@ you can see in my screenshot below, the cat is showing!
 
 # <center> Script <center/>
 
-One of the things i found incredibly useful, was on microsftf documents, it mentioned you can add access when creating containers and storage accounts.<br>
-For example at the end of making a storage account you can add 
+One of the things i found incredibly useful, was on microsoft documents, it mentioned you can add access when creating containers and storage accounts.<br>
+For example at the end of making a storage account you can add: 
  ```
  --allow-blob-public-access true
  ```
- you can see the full command below:
+ You can see the full command below when making a storage account:
  <br>
 
   ```
@@ -26,7 +26,7 @@ az storage account create \
  --allow-blob-public-access true
  ```
 
- Likewise when making a container we can do the same, but it is imperative we also **set** the permission afterward. Note the ** --public-access container** flag. 
+ Likewise when making a container we can do the same, but it is imperative we also **set** the permission afterward. Note the  --public-access container flag. 
 
  ```
 #create container
@@ -45,7 +45,7 @@ az storage container set-permission \
  ```
 
 
-# <center> Working Script <center/>
+# <center> Working Blob Script <center/>
 
  ```
  #!/usr/bin/bash
@@ -88,7 +88,7 @@ curl -o NationalGeographic_2572187_square.jpg https://i.natgeofe.com/n/548467d8-
 mv NationalGeographic_2572187_square.jpg newcat.jpg
 
 
-#upload blob
+# Upload blob
 
 az storage blob upload \
     --account-name tech257morganstorage \
@@ -99,7 +99,7 @@ az storage blob upload \
 
 #make blob public <--command done with container
 
-# cd to home
+# cd to root
 cd /
 
 # CD into app2/views folder
@@ -121,15 +121,19 @@ pm2 kill
 pm2 start app.js
  ```
 
- Below you can see my storage account, container and blob exists:
+ 
 
 ## STORAGE ACCOUNT
- ![alt text](<Screenshot 2024-03-15 at 10.39.54.png>)
+Below you can see my storage account has been created and exists:
+<br>
+![alt text](<Screenshot 2024-03-15 at 10.39.54.png>)
 
  ## CONTAINERS ACCOUNT
-
- ![alt text](<Screenshot 2024-03-15 at 10.40.39.png>)
+Below you can see my container has been created and exists:
+<br>
+![alt text](<Screenshot 2024-03-15 at 10.40.39.png>)
 
 ## BLOBS
-
- ![alt text](<Screenshot 2024-03-15 at 10.44.05.png>)
+Below you can see my blob has been created and exists:
+<br>
+![alt text](<Screenshot 2024-03-15 at 10.44.05.png>)
