@@ -162,3 +162,13 @@ Below you can see my container has been created and exists:
 Below you can see my blob has been created and exists:
 <br>
 ![alt text](<Screenshot 2024-03-15 at 10.44.05.png>)
+
+
+# Revert
+
+
+Make your script called: revert-homepage.sh (save the script in the app folder). Steps for your script:
+change homepage index.ejs file back to normal (could use sed command to do the opposite of before)
+use pm2 to kill the app running
+use pm2 to start the app
+remove storage account you created in the first script
