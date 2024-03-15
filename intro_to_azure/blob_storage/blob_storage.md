@@ -179,4 +179,3 @@ after the app is running correctly in file:
 <img src = "blobl"/v 
 
 
-prepare a script to prepare a blob

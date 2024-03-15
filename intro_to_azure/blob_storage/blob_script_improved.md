@@ -1,7 +1,6 @@
 #!/usr/bin/bash
 
-
-# upgrade for bypassing user input
+# upgrade for bypassing user input <-- may not be needed but just in case
 sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -yq
 
 
