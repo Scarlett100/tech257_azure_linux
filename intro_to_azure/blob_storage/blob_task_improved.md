@@ -1,9 +1,3 @@
-# Blob Task
-
-I have not had a chance to try my script but this is what I believe the app script will look like based on the requirements, I may need to change the order of some things, but will know once I run.
-
-# <center> Script plan <center/>
- ```
 #!/usr/bin/bash
 
 # change the ownership
@@ -21,6 +15,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -yq
 az storage account create --name tech257morganstorage --resource-group tech257 --location uksouth --sku Standard_LRS  --allow-blob-public-access true
 
 #sleep for 15
+
 sleep 15
 
 #enable anonymous blob access on storage account
@@ -73,4 +68,5 @@ pm2 kill
 
 # Start app with pm2
 pm2 start app.js
- ```
+
+
