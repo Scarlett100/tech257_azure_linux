@@ -48,11 +48,8 @@ az storage blob upload \
 
 #make blob public <--command done with container
 
-# cd to home
-cd /
-
 # CD into app2/views folder
-cd /tech257-sparta-app/app2/views
+cd views
 
 # make a backup of this file
 sudo cp index.ejs index.ejs.bk

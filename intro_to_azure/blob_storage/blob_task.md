@@ -2,13 +2,37 @@
 
 So I had to edit my script a few times because it was not finding the index.ejs file. So I decided to make it very clear how to get to index file by cd'ing into folder instead of having views/index.ejs in sed file, just index.ejs. First we had to have the app running, then write a script to add the cat.
 
-you can see in my screenshot below, the cat is showing!
+You can see in my screenshot below, the cat is showing!
 
 ![alt text](<Screenshot 2024-03-15 at 10.28.18.png>)
 
-# <center> Script <center/>
 
-One of the things I found incredibly useful, was on Microsoft documents, it mentioned you can add anonymous access when creating containers and storage accounts.<br>
+# prereq
+
+First of all, it was important the app was workingso I spun up a vm pm2 start
+
+
+# Ownership and Permission
+
+First of all I had to run the following commands in the root directory so that I could make and edit and save a script in the app folder:
+ ```
+ # Change ownership recursively to adminuser:adminuser
+sudo chown -R adminuser:adminuser /tech257-sparta-app
+# Change permissions recursively to 755 
+sudo chmod -R 755 /tech257-sparta-app
+
+re 755:
+4 for read (r)
+2 for write (w)
+1 for execute (x)
+
+The owner has read, write, and execute permissions 7
+The group has read and execute permissions 5
+Others have read and execute permissions 5
+ ```
+
+ # <center> Access <center/>
+One of the things I found incredibly useful, was on Microsoft documents, it mentioned you can add anonmous access when creating containers and storage accounts.<br>
 For example at the end of making a storage account you can add: 
  ```
  --allow-blob-public-access true
@@ -47,11 +71,13 @@ az storage container set-permission \
 
 # <center> Working Blob Script <center/>
 
+To note, this is run within app folder!
+<br>
+
  ```
- #!/usr/bin/bash
+#!/usr/bin/bash
 
-
-# upgrade for bypassing user input, may not be needed but just in case
+# upgrade for bypassing user input <-- may not be needed but just in case
 sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -yq
 
 
@@ -88,7 +114,7 @@ curl -o NationalGeographic_2572187_square.jpg https://i.natgeofe.com/n/548467d8-
 mv NationalGeographic_2572187_square.jpg newcat.jpg
 
 
-# Upload blob
+#upload blob
 
 az storage blob upload \
     --account-name tech257morganstorage \
@@ -99,11 +125,8 @@ az storage blob upload \
 
 #make blob public <--command done with container
 
-# cd to root
-cd /
-
 # CD into app2/views folder
-cd /tech257-sparta-app/app2/views
+cd views
 
 # make a backup of this file
 sudo cp index.ejs index.ejs.bk
@@ -114,11 +137,13 @@ sudo sed -i "/<h2>The app is running correctly.<\/h2>/a <img src=\"https://tech2
 # cd back to app folder
 cd ..
 
+
 # stopPm2 before rerunning.
 pm2 kill 
 
 # Start app with pm2
 pm2 start app.js
+
  ```
 
  
