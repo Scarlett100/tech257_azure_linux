@@ -1,4 +1,4 @@
-If a vm doesnt work and it is still unhealthy after centain amount of time, the scale set will create a new one.![alt text](<Screenshot 2024-03-15 at 12.24.40.png>)
+If a vm doesn't work and it is still unhealthy after certain amount of time, the scale set will create a new one.![alt text](<Screenshot 2024-03-15 at 12.24.40.png>)
 
 
 continuing to make vm:
@@ -18,8 +18,31 @@ hEALTH:
 
 user data:
 
+# what i put into user data that worked
+<br>
+#!/bin/bash
+
+# CD into app2 folder
+cd /tech257-sparta-app/app2
+
+#stopPm2 before rerunning.
+pm2 kill 
+
+# Start app with pm2
+pm2 start app.js
+
+<br>
 ![alt text](<Screenshot 2024-03-15 at 12.45.56.png>)
 
 tags:
 
 ![alt text](<Screenshot 2024-03-15 at 12.46.32.png>)
+
+when you restart will be unhealthy so you must reimage:
+
+Reimage virtual machine in bar above
+
+
+
+
+![alt text](<Screenshot 2024-03-15 at 15.04.47.png>)
