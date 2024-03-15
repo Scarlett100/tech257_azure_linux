@@ -1,4 +1,8 @@
-If a vm doesn't work and it is still unhealthy after certain amount of time, the scale set will create a new one.![alt text](<Screenshot 2024-03-15 at 12.24.40.png>)
+<center> #Scale sets <center/>
+
+
+
+Scale Sets (SS) streamline the deployment and management of identical virtual machines (VMs) in Microsoft Azure. SS easily create a group of VMs that share the same configuration, automatically adjusting their number based on demand. This feature ensures high availability by distributing VM instances across multiple fault domains and update domains. Additionally, SS simplifies management tasks such as deploying updates and installing software across all VM instances simultaneously. It optimises costs by dynamically scaling the number of VMs to match workload demands, while Azure's built-in load balancing capabilities evenly distribute incoming traffic among the VM instances.
 
 
 continuing to make vm:
@@ -77,12 +81,35 @@ But if we must one way to do it is to first click on the instance we need, for t
 ![alt text](<Screenshot 2024-03-15 at 15.48.37.png>)
 
 Once I put in my ssh details path it gives me a code to copy
-![alt text](<Screenshot 2024-03-15 at 15.52.46.png>)
+![alt text](<Screenshot 2024-03-15 at 15.52.46.png>) <br>
 However it gives us a private ip, this would only work if we are on the same network.
 
 As you can see below, I have ssh'ed inside:
 <br>
+
+```
+ssh -i ~/.ssh/morgan-az-key -p 50000 adminuser@4.158.120.166
+
+I had to put the port 50000 and the ip of the load balancer
+```
+<br>
 ![alt text](<Screenshot 2024-03-15 at 16.04.23.png>)
+
+However, when i try to ssh into the unhealthy instance by changing the port slightly:
+
+```
+ssh -i ~/.ssh/morgan-az-key -p 50001adminuser@4.158.120.166
+
+I had to put the port 50001 and the ip of the load balancer
+```
+<br>
+
+The connection is closed, because it has been unhealthy for more than 10 minutes
+![alt text](<Screenshot 2024-03-15 at 16.10.34.png>)
+
+If we look back at the instances, the unhealthy one has dissapeared and we only have the first one, and now a new one, titled number 2.
+![alt text](<Screenshot 2024-03-15 at 16.11.33.png>)
+
 
 # How to delete a vm scale set
 
@@ -90,7 +117,15 @@ There are two options:
 1. If you have tags then you can go into your resource group and delete everything with a tag associated with the scale set.
 2. You can manually select everything and begin to delete.
 
+There are 4 things we need to delete.
+load balancer
+vms
+
 
 
 
 ![alt text](<Screenshot 2024-03-15 at 15.04.47.png>)
+
+
+#
+If a vm doesn't work and it is still unhealthy after certain amount of time, the scale set will create a new one.![alt text](<Screenshot 2024-03-15 at 12.24.40.png>)
