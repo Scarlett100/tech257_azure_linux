@@ -26,7 +26,7 @@ az storage account create \
  --allow-blob-public-access true
  ```
 
- Likewise when making a container we can do the same, but it is imperative we also **set** the permission afterward. Note the ** --public-access container** flag. I made 
+ Likewise when making a container we can do the same, but it is imperative we also **set** the permission afterward. Note the ** --public-access container** flag. 
 
  ```
 #create container
@@ -43,7 +43,9 @@ az storage container set-permission \
     --public-access container \
     --auth-mode login
  ```
-# <center> working Script <center/>
+
+
+# <center> Working Script <center/>
 
  ```
  #!/usr/bin/bash
@@ -112,10 +114,22 @@ sudo sed -i "/<h2>The app is running correctly.<\/h2>/a <img src=\"https://tech2
 # cd back to app folder
 cd ..
 
-
 # stopPm2 before rerunning.
 pm2 kill 
 
 # Start app with pm2
 pm2 start app.js
  ```
+
+ Below you can see my storage account, container and blob exists:
+
+## STORAGE ACCOUNT
+ ![alt text](<Screenshot 2024-03-15 at 10.39.54.png>)
+
+ ## CONTAINERS ACCOUNT
+
+ ![alt text](<Screenshot 2024-03-15 at 10.40.39.png>)
+
+## BLOBS
+
+ ![alt text](<Screenshot 2024-03-15 at 10.44.05.png>)
