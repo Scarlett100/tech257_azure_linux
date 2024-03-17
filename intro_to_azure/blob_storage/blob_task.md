@@ -181,28 +181,30 @@ Next we had to revert: this was my process:
 
 <script for revert-homepage.sh>
 ```
-
 #!/usr/bin/bash
+<br>
 
-
-# navigate to folder
+--- navigate to folder ---
 cd views
 
-# revert image
+--- revert image ---
 sudo sed -i "/<img src=\"https:\/\/tech257morganstorage\.blob\.core\.windows\.net\/testcontainer\/newcat\.jpg\">/d" index.ejs
 
-# back to app folder
+--- back to app folder ---
 cd ..
 
 
-# kill pm2
+--- kill pm2 ---
 pm2 kill 
 
-# start pm2
+--- start pm2 ---
 pm2 start app.js
 
-# remove storage account you created in the first script:
+--- remove storage account you created in the first script: ---
 az storage account delete -n tech257morganstorage -g techtry --yes
 
 ![alt text](<Screenshot 2024-03-17 at 15.55.14.png>)
-```
+ ```
+
+
+
