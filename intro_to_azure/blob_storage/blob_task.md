@@ -1,13 +1,15 @@
 # Blob Task
 
-So I had to edit my script a few times because it was not finding the index.ejs file. So I decided to make it very clear how to get to index file by cd'ing into folder instead of having views/index.ejs in sed file, just index.ejs. First we had to have the app running, then write a script to add the cat.
-
+Our task was to create a storage account, container and blob via a script on a vm that had a vm that already had the app running. Once we were able to do that and get the blob image  showing we then had to create a script to delete the container and its contents.
+<br>
+I had to edit my script a few times because it was not finding the index.ejs file. So I decided to make it very clear how to get to index file by cd'ing into folder instead of having views/index.ejs in sed file, just index.ejs. First we had to have the app running, then write a script to add the cat.
+<br>
 You can see in my screenshot below, the cat is showing!
 
 ![alt text](<Screenshot 2024-03-15 at 10.28.18.png>)
 
 
-# prereq
+# Prerequisites
 
 First of all, it was important the app was workingso I spun up a vm pm2 start.
 you must also install and be logged into the azure cli otherwise this will not work! 
@@ -178,6 +180,7 @@ Next we had to revert: this was my process:
 
 
 <script for revert-homepage.sh>
+```
 
 #!/usr/bin/bash
 
@@ -202,3 +205,4 @@ pm2 start app.js
 az storage account delete -n tech257morganstorage -g techtry --yes
 
 ![alt text](<Screenshot 2024-03-17 at 15.55.14.png>)
+```
