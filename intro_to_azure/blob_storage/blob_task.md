@@ -9,7 +9,14 @@ You can see in my screenshot below, the cat is showing!
 
 # prereq
 
-First of all, it was important the app was workingso I spun up a vm pm2 start
+First of all, it was important the app was workingso I spun up a vm pm2 start.
+you must also install and be logged into the azure cli otherwise this will not work! 
+ ```
+ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+ az versionaz 
+ az login
+  ```
+
 
 
 # Ownership and Permission
@@ -167,8 +174,31 @@ Below you can see my blob has been created and exists:
 # Revert
 
 
-Make your script called: revert-homepage.sh (save the script in the app folder). Steps for your script:
-change homepage index.ejs file back to normal (could use sed command to do the opposite of before)
-use pm2 to kill the app running
-use pm2 to start the app
-remove storage account you created in the first script
+Next we had to revert: this was my process:
+
+
+<script for revert-homepage.sh>
+
+#!/usr/bin/bash
+
+
+# navigate to folder
+cd views
+
+# revert image
+sudo sed -i "/<img src=\"https:\/\/tech257morganstorage\.blob\.core\.windows\.net\/testcontainer\/newcat\.jpg\">/d" index.ejs
+
+# back to app folder
+cd ..
+
+
+# kill pm2
+pm2 kill 
+
+# start pm2
+pm2 start app.js
+
+# remove storage account you created in the first script:
+az storage account delete -n tech257morganstorage -g techtry --yes
+
+![alt text](<Screenshot 2024-03-17 at 15.55.14.png>)
