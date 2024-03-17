@@ -68,4 +68,3 @@ We then entered it into user data in our vm,by going onto the advanced tab and e
 
 
 
-
