@@ -4,7 +4,7 @@ Our task was to create a storage account, container and blob via a script on a v
 <br>
 I had to edit my script a few times because it was not finding the index.ejs file. So I decided to make it very clear how to get to index file by cd'ing into folder instead of having views/index.ejs in sed file, just index.ejs. First we had to have the app running, then write a script to add the cat.
 <br>
-You can see in my screenshot below, the cat is showing!
+You can see in my screenshot below, the cat is showing! Below I will explain hoe I got there.
 
 ![alt text](<Screenshot 2024-03-15 at 10.28.18.png>)
 
@@ -176,7 +176,7 @@ Below you can see my blob has been created and exists:
 # Revert
 
 
-Next we had to revert: this was my process:
+Next we had to revert, in order to close our storage accounts and remove the blob. This was my process:
 
 
 ## script for revert-homepage.sh
