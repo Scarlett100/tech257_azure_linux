@@ -105,7 +105,7 @@ az storage container delete \
     az storage container list --account-name tech257morganstorage --auth-mode login
  ```
 
-## better more structred way to see
+## better more structured way to see
  ```
     az storage container list \
     --account-name tech257morganstorage \
