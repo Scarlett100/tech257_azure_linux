@@ -71,7 +71,7 @@ pm2 kill
 pm2 start app.js
  ```
 <br>
-![alt text](<Screenshot 2024-03-15 at 12.45.56.png>)
+
 
 Tags:
 Personally, I like to locate my resources via tags, so this step it very important.
@@ -133,7 +133,7 @@ ssh -i ~/.ssh/morgan-az-key -p 50000 adminuser@4.158.120.166
 I had to put the port 50000 and the ip of the load balancer
 ```
 <br>
-![alt text](<Screenshot 2024-03-15 at 16.04.23.png>)
+![alt text](sshd.png)
 
 However, when I try to ssh into the unhealthy instance by changing the port slightly:
 
