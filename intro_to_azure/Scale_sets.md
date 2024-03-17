@@ -133,6 +133,7 @@ ssh -i ~/.ssh/morgan-az-key -p 50000 adminuser@4.158.120.166
 I had to put the port 50000 and the ip of the load balancer
 ```
 <br>
+
 ![alt text](sshd.png)
 
 However, when I try to ssh into the unhealthy instance by changing the port slightly:
