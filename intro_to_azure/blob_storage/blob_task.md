@@ -180,6 +180,7 @@ Next we had to revert: this was my process:
 
 
 <script for revert-homepage.sh>
+    <br>
 ```
 #!/usr/bin/bash
 <br>
@@ -202,9 +203,10 @@ pm2 start app.js
 
 --- remove storage account you created in the first script: ---
 az storage account delete -n tech257morganstorage -g techtry --yes
+```
 
 ![alt text](<Screenshot 2024-03-17 at 15.55.14.png>)
- ```
+ 
 
 
 
