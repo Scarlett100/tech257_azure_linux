@@ -3,12 +3,9 @@
 
 
 Scale Sets (SS) streamline the deployment and management of identical virtual machines (VMs) in Microsoft Azure. SS easily create a group of VMs that share the same configuration, automatically adjusting their number based on demand. This feature ensures high availability by distributing VM instances across multiple fault domains and update domains. Additionally, SS simplifies management tasks such as deploying updates and installing software across all VM instances simultaneously. It optimises costs by dynamically scaling the number of VMs to match workload demands, while Azure's built-in load balancing capabilities evenly distribute incoming traffic among the VM instances.
-When we create scale sets we create:
-
-VM
-Network interface settings
-Load balancer 
-OS and Data disk settings
+<br>
+![alt text](<scaleset (2).png>)
+Scale sets enable use to achieve high availability and scalability.
 
 Firstly we need to navigate to scalesets within the azure search bar and once selcted click create. You will notice the firstpage is similar to our normal page when making a vm. For this task it was important that we chose the correct image, the one we had made ourselves.
 <br>
