@@ -104,14 +104,14 @@ Now the status is restored to running:
 ![alt text](<Screenshot 2024-03-15 at 15.31.50.png>)
 
 <br>
-If we refresh the load balancer ip we will find the app is back up, whereas before we got a bad gateway error:
+If we refresh the load balancer ip we will find the app is back up, whereas before we got a bad gateway error.
 <br>
-![alt text](<Screenshot 2024-03-15 at 15.34.14.png>)
 
 If you want to get an unhealthy status again, you can restart instance, or start and stop instance. As you can see below I have restarted one instance and ended up with an unhealthy status:
 
 <br>
- ![alt text](<Screenshot 2024-03-15 at 15.44.08.png>)
+
+![alt text](<Screenshot 2024-03-15 at 15.44.08.png>)
 
 # <center>  How to ssh into instance <center/>
 Outside of the testing stage we shouldn't really ssh into our scaleset vm's.
