@@ -1,45 +1,8 @@
 
-<center> # 3-subnet architecture to make the database private <center/>
+#  <center> 3 subnet architecture to make the database private <center/>
 
 
-
-Okay. So instead of allowing ssh in from anywhere. 
-vOnce again, we can make the ssh rule. We can make it also more strict Ok
-
-Ok, right. So that's one very simple way. Already make our database more private. OK, so let's talk a little bit more now about the subnet. So what's the name of the subnet I'll go back to black. So the blue things I'm going to put the things in blue that we need to change.
-
-
-Virtual machine at the moment. So what else do we know? Does it have a public ip address at the moment Are we usually able to ssh end to our database virtual machine at the moment? Is that how we've been doing it? Yeah. So at the moment. Has quit been giving out public IP address? Okay
-
-
-Can ssh into app vm, from that can ssh into db vm, so you can ssh in from another vm to another, called jumpbox.little bit more complex, but more secure.
-
-
-How can we make it more secure?
-
-what is recommeneded is to change the routing, 
-all azure routing by default all happens in the background is called system routes.
-for everything within our virtual network to talk to each other system routes take care of that.
-to increase security, you need to sort out routing manually, this is called **user routing**.
-this will filter all trafic between app  and db.
-
-to do this we will use a network virtual appliance .
-its job is to make sure any packets go through this machine, it then fowards it to the db vm.
-so we configure rules to make sure only what we route gets to db vm.
-there is only one path to db.
-have to come from app vm or will not be allowed.
- the  network virtual appliance must have  a NIC and NSG. The NSG will allow SSH on its incoming rules.
-
-we will also need a route table
-
-route table will be associated directly with the subnet of app vm.
-route table will make sure traffic goes (hops)to nsg of nva and nowhere else.
-nva then forwards the traffic to dm vm. this forwarded traffic has been filtered by the nva.
-
-on nva nic we need ip forwarding enabled(on azure). in linux we also need to tell it that we want to foward ip's and that they are enabled. Has to happen in both of 2 places.
-everything that makes it to the nva will get forwarded if you do not setup rules in ip tables in linux.
-
-Everything in blue we need to setup.
+![alt text](<Screenshot 2024-03-18 at 17.02.30.png>)
 
 # 1.Create a virtual network
 Virtual Networks give us the base for our private network within Azure. 
@@ -210,21 +173,25 @@ Within the script we put the below:
  
 echo "Configuring iptables..."
  
-# ADD COMMENT ABOUT WHAT THE FOLLOWING COMMAND(S) DO
+# Allow incoming traffic on the loopback interface.
 sudo iptables -A INPUT -i lo -j ACCEPT
+
+# Allow outgoing traffic on the loopback interface.
 sudo iptables -A OUTPUT -o lo -j ACCEPT
  
-# ADD COMMENT ABOUT WHAT THE FOLLOWING COMMAND(S) DO
+# Allow incoming traffic that is part of an established connection or related to an established connection.
 sudo iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
  
-# ADD COMMENT ABOUT WHAT THE FOLLOWING COMMAND(S) DO
+# Allow outgoing traffic that is part of an established connection.
 sudo iptables -A OUTPUT -m state --state ESTABLISHED -j ACCEPT
  
-# ADD COMMENT ABOUT WHAT THE FOLLOWING COMMAND(S) DO
+# Drop incoming packets that are not part of any established connection.
 sudo iptables -A INPUT -m state --state INVALID -j DROP
  
-# ADD COMMENT ABOUT WHAT THE FOLLOWING COMMAND(S) DO
+# Allow incoming TCP traffic on port 22 (SSH) for new connections and established connections.
 sudo iptables -A INPUT -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
+
+# Allow outgoing TCP traffic from port 22 (SSH) for established connections.
 sudo iptables -A OUTPUT -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
  
 # uncomment the following lines if want allow SSH into NVA only through the public subnet (app VM as a jumpbox)
@@ -237,16 +204,18 @@ sudo iptables -A OUTPUT -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
 #sudo iptables -A OUTPUT -p tcp --dport 22 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
 #sudo iptables -A INPUT -p tcp --sport 22 -m conntrack --ctstate ESTABLISHED -j ACCEPT
  
-# ADD COMMENT ABOUT WHAT THE FOLLOWING COMMAND(S) DO
+ Allow TCP traffic from source network 10.0.2.0/24 to destination network 10.0.4.0/24 on port 27017 for forwarding.
 sudo iptables -A FORWARD -p tcp -s 10.0.2.0/24 -d 10.0.4.0/24 --destination-port 27017 -m tcp -j ACCEPT
  
-# ADD COMMENT ABOUT WHAT THE FOLLOWING COMMAND(S) DO
+
+# Allow ICMP traffic from source network 10.0.2.0/24 to destination network 10.0.4.0/24 for forwarding.
 sudo iptables -A FORWARD -p icmp -s 10.0.2.0/24 -d 10.0.4.0/24 -m state --state NEW,ESTABLISHED -j ACCEPT
  
-# ADD COMMENT ABOUT WHAT THE FOLLOWING COMMAND(S) DO
+# Set the default policy for incoming packets to DROP (deny all unless explicitly allowed).
+sudo iptables -P INPUT DROP
 sudo iptables -P INPUT DROP
  
-# ADD COMMENT ABOUT WHAT THE FOLLOWING COMMAND(S) DO
+# Set the default policy for forwarded packets to DROP (deny all unless explicitly allowed).
 sudo iptables -P FORWARD DROP
  
 echo "Done!"
@@ -266,6 +235,6 @@ You can see site works again:
 ![alt text](<Screenshot 2024-03-18 at 15.57.40.png>)
 
 
-# questions
+# questions to ask later
 where does this go?
 node seeds/seed.js
