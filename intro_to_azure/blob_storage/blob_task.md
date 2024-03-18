@@ -176,7 +176,8 @@ Below you can see my blob has been created and exists:
 # Revert
 
 
-Next we had to revert, in order to close our storage accounts and remove the blob. This was my process:
+Next we had to revert, in order to close our storage accounts and remove the blob. If you notice, at the end of my sed command I have: */d*.  This is the sed command to delete lines that match the specified pattern. So, in this case, it's searching for lines containing the specified <img> tag and deleting them.
+This was my process:
 
 
 ## script for revert-homepage.sh
