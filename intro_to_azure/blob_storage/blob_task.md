@@ -213,5 +213,7 @@ As you can see below the blob (or cat) is gone.
 ![alt text](<Screenshot 2024-03-17 at 15.55.14.png>)
  
 
+# References
 
+https://learn.microsoft.com/en-us/azure/storage/blobs/anonymous-read-access-configure?tabs=azure-cli
 
