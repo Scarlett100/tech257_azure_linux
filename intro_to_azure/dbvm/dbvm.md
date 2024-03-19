@@ -1,8 +1,8 @@
 
 #  <center> 3 subnet architecture to make the database private <center/>
 
+![alt text](<Screenshot 2024-03-19 at 09.19.09.png>)
 
-![alt text](<Screenshot 2024-03-18 at 17.02.30.png>)
 
 # 1.Create a virtual network
 Virtual Networks give us the base for our private network within Azure. 
